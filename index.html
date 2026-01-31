@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Westley Group | Enterprise Financial Technology Solutions</title>
+    <title>Westley Group | Fractional CTO & AI Infrastructure</title>
     <meta name="description"
-        content="Leading enterprise fintech solutions provider. Transform your financial operations with cutting-edge technology, AI-powered analytics, and secure payment infrastructure.">
+        content="Fractional CTO services and AI infrastructure consulting for regulated enterprises. Ex-JPMorgan, Cisco, Palantir. Private LLM deployment, workflow automation, and AI governance.">
     <link rel="icon" type="image/png" href="logo.png">
     <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,11 +26,10 @@
             </div>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#solutions" class="nav-link">Solutions</a></li>
-                <li><a href="#platform" class="nav-link">Platform</a></li>
-                <li><a href="#blog" class="nav-link">Blog</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#approach" class="nav-link">Approach</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#contact" class="nav-link cta-btn">Get Started</a></li>
+                <li><a href="#contact" class="nav-link cta-btn">Contact</a></li>
             </ul>
             <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
                 <span></span>
@@ -49,284 +48,250 @@
         </div>
         <div class="container hero-container">
             <div class="hero-content">
+                <!-- NEW: Pedigree Badge -->
                 <div class="hero-badge">
                     <span class="badge-dot"></span>
-                    <span>Trusted by 500+ Enterprise Clients</span>
+                    <span>Ex-JPMorgan • Cisco • Palantir</span>
                 </div>
+
                 <h1 class="hero-title">
-                    The Future of
-                    <span class="gradient-text">Financial Technology</span>
+                    Fractional CTO for
+                    <span class="gradient-text">AI Infrastructure</span>
                 </h1>
                 <p class="hero-subtitle">
-                    Transform your financial operations with AI-powered solutions, real-time analytics,
-                    and enterprise-grade security. Built for scale, designed for innovation.
+                    Enterprise-grade AI deployment without the enterprise overhead.
+                    Private LLM architecture, workflow automation, and compliance frameworks
+                    for regulated industries. Available for Q1 engagements.
                 </p>
                 <div class="hero-cta">
                     <button class="btn btn-primary" id="scheduleDemo">
-                        <span>Schedule a Demo</span>
+                        <span>Schedule Consultation</span>
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                             <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2"
                                 stroke-linecap="round" />
                         </svg>
                     </button>
-                    <button class="btn btn-secondary" id="watchVideo">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path d="M6.5 5.5L14.5 10L6.5 14.5V5.5Z" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                        <span>Watch Video</span>
+                    <button class="btn btn-secondary" id="viewServices">
+                        <span>View Services</span>
                     </button>
                 </div>
+
+                <!-- FIXED STATS: Truthful, no NaN -->
                 <div class="hero-stats">
                     <div class="stat-item">
-                        <div class="stat-value" data-target="99.9">0</div>
-                        <div class="stat-label">% Uptime</div>
+                        <div class="stat-value">10+</div>
+                        <div class="stat-label">Years Experience</div>
                     </div>
                     <div class="stat-divider"></div>
                     <div class="stat-item">
-                        <div class="stat-value"><span data-target="50">0</span>B+</div>
-                        <div class="stat-label">Transactions Processed</div>
+                        <div class="stat-value">3</div>
+                        <div class="stat-label">Major Platforms</div>
                     </div>
                     <div class="stat-divider"></div>
                     <div class="stat-item">
-                        <div class="stat-value" data-target="150">0</div>
-                        <div class="stat-label">Countries</div>
+                        <div class="stat-value">4</div>
+                        <div class="stat-label">Charter Slots Q1</div>
                     </div>
                 </div>
             </div>
+
+            <!-- NEW: Architecture Diagram / Code Block -->
             <div class="hero-visual">
-                <div class="dashboard-mockup">
-                    <div class="mockup-header">
-                        <div class="mockup-dots">
+                <div class="code-window">
+                    <div class="code-header">
+                        <div class="code-dots">
                             <span></span>
                             <span></span>
                             <span></span>
                         </div>
-                        <div class="mockup-title">Financial Dashboard</div>
+                        <span class="code-title">infrastructure.yaml</span>
                     </div>
-                    <div class="mockup-content">
-                        <div class="chart-container">
-                            <canvas id="heroChart"></canvas>
-                        </div>
-                        <div class="metrics-grid">
-                            <div class="metric-card">
-                                <div class="metric-icon"
-                                    style="background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <path d="M13 7L9 12L13 17" stroke="white" stroke-width="2"
-                                            stroke-linecap="round" />
-                                    </svg>
-                                </div>
-                                <div class="metric-info">
-                                    <div class="metric-value">$2.4M</div>
-                                    <div class="metric-label">Revenue</div>
-                                </div>
-                                <div class="metric-change positive">+12.5%</div>
-                            </div>
-                            <div class="metric-card">
-                                <div class="metric-icon"
-                                    style="background: linear-gradient(135deg, #10B981 0%, #059669 100%);">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <path d="M7 17L17 7M17 7H9M17 7V15" stroke="white" stroke-width="2"
-                                            stroke-linecap="round" />
-                                    </svg>
-                                </div>
-                                <div class="metric-info">
-                                    <div class="metric-value">45.2K</div>
-                                    <div class="metric-label">Transactions</div>
-                                </div>
-                                <div class="metric-change positive">+8.3%</div>
-                            </div>
-                        </div>
+                    <div class="code-content">
+                        <pre><code><span class="code-comment"># Private LLM Deployment Stack</span>
+<span class="code-keyword">infrastructure:</span>
+  <span class="code-property">llm:</span> <span class="code-string">Llama-3-70B (air-gapped)</span>
+  <span class="code-property">vector_db:</span> <span class="code-string">Pinecone Enterprise</span>
+  <span class="code-property">compliance:</span> 
+    - <span class="code-string">SOC 2 Type II</span>
+    - <span class="code-string">GDPR Compliant</span>
+    - <span class="code-string">Audit Logging</span>
+  <span class="code-property">uptime:</span> <span class="code-number">99.9%</span>
+  
+<span class="code-comment"># Deployment: 24-48 hours</span>
+<span class="code-comment"># Founder: Ex-JPMorgan/Palantir</span></code></pre>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Solutions Section -->
-    <section class="solutions" id="solutions">
+    <!-- Services Section (Replaces Solutions) -->
+    <section class="solutions" id="services">
         <div class="container">
             <div class="section-header">
-                <span class="section-badge">Solutions</span>
-                <h2 class="section-title">Comprehensive Financial Solutions</h2>
+                <span class="section-badge">Services</span>
+                <h2 class="section-title">AI Infrastructure & Automation</h2>
                 <p class="section-subtitle">
-                    End-to-end fintech infrastructure designed for modern enterprises
+                    Hands-on technical leadership for companies navigating AI deployment
                 </p>
             </div>
             <div class="solutions-grid">
-                <div class="solution-card">
-                    <div class="solution-icon">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                            <rect x="4" y="8" width="24" height="16" rx="2" stroke="currentColor" stroke-width="2" />
-                            <path d="M4 12H28" stroke="currentColor" stroke-width="2" />
-                            <circle cx="10" cy="18" r="2" fill="currentColor" />
-                        </svg>
-                    </div>
-                    <h3 class="solution-title">Payment Processing</h3>
-                    <p class="solution-description">
-                        Lightning-fast payment infrastructure with multi-currency support,
-                        fraud detection, and real-time settlement.
-                    </p>
-                    <ul class="solution-features">
-                        <li>Global payment acceptance</li>
-                        <li>AI-powered fraud prevention</li>
-                        <li>Instant settlements</li>
-                    </ul>
-                    <a href="#" class="solution-link">
-                        Learn more
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5"
-                                stroke-linecap="round" />
-                        </svg>
-                    </a>
-                </div>
-
+                <!-- Service 1: Lead Response (Phase 1 Cash Flow) -->
                 <div class="solution-card featured">
-                    <div class="featured-badge">Most Popular</div>
+                    <div class="featured-badge">Immediate Impact</div>
                     <div class="solution-icon">
                         <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                            <path d="M16 4L4 10V16C4 23 16 28 16 28C16 28 28 23 28 16V10L16 4Z" stroke="currentColor"
-                                stroke-width="2" stroke-linejoin="round" />
-                            <path d="M12 16L15 19L21 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
+                            <path d="M8 12L4 16M4 16L8 20M4 16H20" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                            <path
+                                d="M16 8V6C16 4.89543 16.8954 4 18 4H26C27.1046 4 28 4.89543 28 6V26C28 27.1046 27.1046 28 26 28H18C16.8954 28 16 27.1046 16 26V24"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" />
                         </svg>
                     </div>
-                    <h3 class="solution-title">Banking-as-a-Service</h3>
+                    <h3 class="solution-title">Lead Response Automation</h3>
                     <p class="solution-description">
-                        Complete banking infrastructure with account management,
-                        card issuance, and regulatory compliance built-in.
+                        AI-powered instant response systems for high-velocity sales teams.
+                        Capture leads in under 60 seconds, 24/7. Ideal for recruiting agencies
+                        and professional services.
                     </p>
                     <ul class="solution-features">
-                        <li>White-label banking platform</li>
-                        <li>Automated compliance</li>
-                        <li>Virtual & physical cards</li>
+                        <li>Sub-60-second SMS/Email response</li>
+                        <li>Automatic qualification & CRM injection</li>
+                        <li>24-hour implementation</li>
+                        <li>Works with existing tools (GoHighLevel, Salesforce)</li>
                     </ul>
-                    <a href="#" class="solution-link">
-                        Learn more
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5"
-                                stroke-linecap="round" />
-                        </svg>
-                    </a>
+                    <div class="solution-price">From $4,500 setup</div>
                 </div>
 
+                <!-- Service 2: Private LLM (Core Expertise) -->
                 <div class="solution-card">
                     <div class="solution-icon">
                         <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
                             <rect x="6" y="6" width="20" height="20" rx="2" stroke="currentColor" stroke-width="2" />
-                            <path d="M6 12H26M12 6V26M20 12V26" stroke="currentColor" stroke-width="2" />
-                        </svg>
-                    </div>
-                    <h3 class="solution-title">Analytics & Insights</h3>
-                    <p class="solution-description">
-                        Advanced analytics platform with predictive modeling,
-                        custom dashboards, and actionable intelligence.
-                    </p>
-                    <ul class="solution-features">
-                        <li>Real-time data visualization</li>
-                        <li>Predictive analytics</li>
-                        <li>Custom reporting</li>
-                    </ul>
-                    <a href="#" class="solution-link">
-                        Learn more
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5"
-                                stroke-linecap="round" />
-                        </svg>
-                    </a>
-                </div>
-
-                <div class="solution-card">
-                    <div class="solution-icon">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                            <circle cx="16" cy="16" r="10" stroke="currentColor" stroke-width="2" />
-                            <path d="M16 12V16L19 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                        </svg>
-                    </div>
-                    <h3 class="solution-title">Risk Management</h3>
-                    <p class="solution-description">
-                        Comprehensive risk assessment and mitigation with AI-driven
-                        monitoring and automated compliance workflows.
-                    </p>
-                    <ul class="solution-features">
-                        <li>Automated risk scoring</li>
-                        <li>Compliance monitoring</li>
-                        <li>Fraud detection</li>
-                    </ul>
-                    <a href="#" class="solution-link">
-                        Learn more
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5"
-                                stroke-linecap="round" />
-                        </svg>
-                    </a>
-                </div>
-
-                <div class="solution-card">
-                    <div class="solution-icon">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                            <path d="M8 16C8 16 11 10 16 10C21 10 24 16 24 16C24 16 21 22 16 22C11 22 8 16 8 16Z"
+                            <path d="M12 16C12 16 14 12 16 12C18 12 20 16 20 16C20 16 18 20 16 20C14 20 12 16 12 16Z"
                                 stroke="currentColor" stroke-width="2" />
-                            <circle cx="16" cy="16" r="3" stroke="currentColor" stroke-width="2" />
+                            <path d="M6 12H26M6 20H26" stroke="currentColor" stroke-width="2" />
                         </svg>
                     </div>
-                    <h3 class="solution-title">Identity Verification</h3>
+                    <h3 class="solution-title">Private AI Infrastructure</h3>
                     <p class="solution-description">
-                        Secure KYC/AML solutions with biometric verification,
-                        document validation, and global coverage.
+                        Air-gapped LLM deployment for regulated environments. Deploy Llama 3,
+                        Mistral, or custom models with full data sovereignty.
                     </p>
                     <ul class="solution-features">
-                        <li>Biometric authentication</li>
-                        <li>Document verification</li>
-                        <li>Global compliance</li>
+                        <li>On-premise or private cloud deployment</li>
+                        <li>RAG (Retrieval Augmented Generation) systems</li>
+                        <li>Vector database architecture</li>
+                        <li>Complete audit trails</li>
                     </ul>
-                    <a href="#" class="solution-link">
-                        Learn more
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5"
-                                stroke-linecap="round" />
-                        </svg>
-                    </a>
+                    <div class="solution-price">From $25,000</div>
                 </div>
 
+                <!-- Service 3: Fractional CTO (Enterprise) -->
                 <div class="solution-card">
                     <div class="solution-icon">
                         <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                            <path d="M16 4V28M4 16H28" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                            <circle cx="16" cy="16" r="8" stroke="currentColor" stroke-width="2" />
+                            <path d="M16 4L4 10V22L16 28L28 22V10L16 4Z" stroke="currentColor" stroke-width="2"
+                                stroke-linejoin="round" />
+                            <path d="M16 16L16 28" stroke="currentColor" stroke-width="2" />
+                            <path d="M16 16L4 10" stroke="currentColor" stroke-width="2" />
+                            <path d="M16 16L28 10" stroke="currentColor" stroke-width="2" />
                         </svg>
                     </div>
-                    <h3 class="solution-title">API Infrastructure</h3>
+                    <h3 class="solution-title">Fractional CTO</h3>
                     <p class="solution-description">
-                        Developer-friendly APIs with comprehensive documentation,
-                        SDKs, and 24/7 technical support.
+                        Strategic AI leadership for mid-market companies. Architecture review,
+                        vendor selection, compliance strategy, and team leadership.
                     </p>
                     <ul class="solution-features">
-                        <li>RESTful & GraphQL APIs</li>
-                        <li>Extensive documentation</li>
-                        <li>Multi-language SDKs</li>
+                        <li>AI governance framework development</li>
+                        <li>Technical due diligence for investments</li>
+                        <li>Regulatory compliance (SOC 2, EU AI Act)</li>
+                        <li>Weekly strategic advisory</li>
                     </ul>
-                    <a href="#" class="solution-link">
-                        Learn more
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5"
-                                stroke-linecap="round" />
+                    <div class="solution-price">$15,000/month</div>
+                </div>
+
+                <!-- Service 4: AI Governance -->
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 4C16 4 8 8 8 16C8 21 11 26 16 28C21 26 24 21 24 16C24 8 16 4 16 4Z"
+                                stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                            <path d="M12 16L15 19L20 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
                         </svg>
-                    </a>
+                    </div>
+                    <h3 class="solution-title">AI Governance & Risk</h3>
+                    <p class="solution-description">
+                        Compliance frameworks for regulated industries. Audit trails, bias detection,
+                        and documentation for financial services and healthcare.
+                    </p>
+                    <ul class="solution-features">
+                        <li>SOC 2 / ISO 42001 readiness</li>
+                        <li>Model card documentation</li>
+                        <li>Bias auditing & testing</li>
+                        <li>Regulatory submission support</li>
+                    </ul>
+                    <div class="solution-price">From $15,000</div>
+                </div>
+
+                <!-- Service 5: Workflow Automation (Generic but useful) -->
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <rect x="4" y="6" width="10" height="20" rx="2" stroke="currentColor" stroke-width="2" />
+                            <rect x="18" y="6" width="10" height="20" rx="2" stroke="currentColor" stroke-width="2" />
+                            <path d="M14 16H18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3 class="solution-title">Enterprise Workflow Automation</h3>
+                    <p class="solution-description">
+                        Connect disparate systems and eliminate manual data entry.
+                        Enterprise-grade reliability with 99.9% uptime guarantees.
+                    </p>
+                    <ul class="solution-features">
+                        <li>CRM & ERP integration</li>
+                        <li>Document processing pipelines</li>
+                        <li>API middleware development</li>
+                        <li>Legacy system modernization</li>
+                    </ul>
+                    <div class="solution-price">From $10,000</div>
+                </div>
+
+                <!-- Service 6: Technical Due Diligence (VC/PE) -->
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2" />
+                            <path d="M18 18L28 28" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3 class="solution-title">Technical Due Diligence</h3>
+                    <p class="solution-description">
+                        Rapid technical assessment for PE/VC firms investing in AI companies.
+                        Verify claims, identify risks, validate architecture.
+                    </p>
+                    <ul class="solution-features">
+                        <li>2-day deep dive analysis</li>
+                        <li>Technical risk assessment</li>
+                        <li>Scalability evaluation</li>
+                        <li>10-page confidential report</li>
+                    </ul>
+                    <div class="solution-price">$20,000 flat fee</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Platform Section -->
-    <section class="platform" id="platform">
+    <!-- Approach Section (Replaces Platform/Code Section) -->
+    <section class="platform" id="approach">
         <div class="container">
             <div class="section-header">
-                <span class="section-badge">Platform</span>
-                <h2 class="section-title">Built for Enterprise Scale</h2>
+                <span class="section-badge">Approach</span>
+                <h2 class="section-title">Built for Regulated Environments</h2>
                 <p class="section-subtitle">
-                    Infrastructure that grows with your business
+                    Financial services-grade reliability applied to your AI infrastructure
                 </p>
             </div>
             <div class="platform-content">
@@ -336,47 +301,52 @@
                         <div class="feature-content">
                             <h3 class="feature-title">Enterprise Security</h3>
                             <p class="feature-description">
-                                Bank-grade encryption, SOC 2 Type II certified, and compliance
-                                with global financial regulations including PCI DSS, GDPR, and SOX.
+                                Background in JPMorgan and Palantir means we build with compliance
+                                and security as defaults, not afterthoughts. Air-gapped deployments,
+                                encryption at rest and in transit, and complete audit trails.
                             </p>
                             <div class="feature-badges">
-                                <span class="badge">SOC 2 Type II</span>
-                                <span class="badge">PCI DSS</span>
-                                <span class="badge">ISO 27001</span>
+                                <span class="badge">SOC 2</span>
+                                <span class="badge">ISO 42001</span>
+                                <span class="badge">GDPR/CCPA</span>
                             </div>
                         </div>
                     </div>
-                    <div class="feature-item" data-feature="scalability">
+                    <div class="feature-item" data-feature="speed">
                         <div class="feature-number">02</div>
                         <div class="feature-content">
-                            <h3 class="feature-title">Infinite Scalability</h3>
+                            <h3 class="feature-title">Rapid Deployment</h3>
                             <p class="feature-description">
-                                Auto-scaling infrastructure that handles millions of transactions
-                                per second with consistent sub-100ms latency worldwide.
+                                We deliver in days what takes traditional consultancies months.
+                                Pre-built templates combined with custom architecture. No bloated
+                                teams—just senior engineers who execute.
                             </p>
                             <div class="feature-badges">
-                                <span class="badge">99.99% Uptime</span>
-                                <span class="badge">Auto-scaling</span>
-                                <span class="badge">Global CDN</span>
+                                <span class="badge">24-48 Hour Setup</span>
+                                <span class="badge">Remote Implementation</span>
+                                <span class="badge">Minimal Disruption</span>
                             </div>
                         </div>
                     </div>
-                    <div class="feature-item" data-feature="integration">
+                    <div class="feature-item" data-feature="ownership">
                         <div class="feature-number">03</div>
                         <div class="feature-content">
-                            <h3 class="feature-title">Seamless Integration</h3>
+                            <h3 class="feature-title">You Own Everything</h3>
                             <p class="feature-description">
-                                Pre-built connectors for 200+ financial institutions, ERPs,
-                                and business tools. Deploy in days, not months.
+                                No proprietary black boxes. You own the code, the infrastructure,
+                                and the IP. We document everything and train your team.
+                                True independence from day one.
                             </p>
                             <div class="feature-badges">
-                                <span class="badge">200+ Integrations</span>
-                                <span class="badge">REST API</span>
-                                <span class="badge">Webhooks</span>
+                                <span class="badge">Full Documentation</span>
+                                <span class="badge">Knowledge Transfer</span>
+                                <span class="badge">No Lock-in</span>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Technical Credibility Block -->
                 <div class="platform-visual">
                     <div class="code-window">
                         <div class="code-header">
@@ -385,26 +355,26 @@
                                 <span></span>
                                 <span></span>
                             </div>
-                            <span class="code-title">payment-api.js</span>
+                            <span class="code-title">pedigree.json</span>
                         </div>
                         <div class="code-content">
-                            <pre><code><span class="code-keyword">const</span> <span class="code-variable">westley</span> = <span class="code-function">require</span>(<span class="code-string">'@westley/sdk'</span>);
-
-<span class="code-keyword">const</span> <span class="code-variable">payment</span> = <span class="code-keyword">await</span> westley.payments.<span class="code-function">create</span>({
-  <span class="code-property">amount</span>: <span class="code-number">10000</span>,
-  <span class="code-property">currency</span>: <span class="code-string">'USD'</span>,
-  <span class="code-property">method</span>: <span class="code-string">'card'</span>,
-  <span class="code-property">customer</span>: {
-    <span class="code-property">id</span>: <span class="code-string">'cust_abc123'</span>,
-    <span class="code-property">email</span>: <span class="code-string">'customer@example.com'</span>
+                            <pre><code>{
+  <span class="code-property">"founder"</span>: {
+    <span class="code-property">"background"</span>: [
+      <span class="code-string">"JPMorgan Chase"</span>,
+      <span class="code-string">"Cisco Systems"</span>,
+      <span class="code-string">"Palantir Technologies"</span>
+    ],
+    <span class="code-property">"education"</span>: <span class="code-string">"M.S. Software Engineering"</span>,
+    <span class="code-property">"specialization"</span>: [
+      <span class="code-string">"Private LLM Deployment"</span>,
+      <span class="code-string">"Regulated AI Systems"</span>,
+      <span class="code-string">"Data Infrastructure"</span>
+    ]
   },
-  <span class="code-property">metadata</span>: {
-    <span class="code-property">orderId</span>: <span class="code-string">'order_xyz789'</span>
-  }
-});
-
-<span class="code-comment">// Payment processed in &lt;100ms</span>
-console.<span class="code-function">log</span>(payment.<span class="code-property">status</span>); <span class="code-comment">// 'succeeded'</span></code></pre>
+  <span class="code-property">"availability"</span>: <span class="code-string">"Q1 2026 - 4 slots"</span>,
+  <span class="code-property">"location"</span>: <span class="code-string">"New Jersey (Remote USA)"</span>
+}</code></pre>
                         </div>
                     </div>
                 </div>
@@ -412,393 +382,154 @@ console.<span class="code-function">log</span>(payment.<span class="code-propert
         </div>
     </section>
 
-    <!-- Blog Section -->
-    <section class="blog" id="blog">
+    <!-- About/Pedigree Section (Replaces Blog) -->
+    <section class="blog" id="about">
         <div class="container">
             <div class="section-header">
-                <span class="section-badge">Blog</span>
-                <h2 class="section-title">Latest Blog Posts</h2>
+                <span class="section-badge">Background</span>
+                <h2 class="section-title">Engineering Leadership</h2>
                 <p class="section-subtitle">
-                    Stay ahead with expert insights and industry updates
+                    Decade of mission-critical systems at global scale
                 </p>
             </div>
+
+            <!-- NEW: Resume Cards -->
             <div class="blog-grid">
                 <article class="insight-card featured-insight">
-                    <div class="insight-image" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%);">
-                        <div class="insight-category">Breaking News</div>
+                    <div class="insight-image" style="background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);">
+                        <div class="insight-category">Previous Role</div>
                     </div>
                     <div class="insight-content">
-                        <h3 class="insight-title">Mortgage Rates Hit 3-Year Low After Trump's Bond-Buying Announcement
-                        </h3>
+                        <h3 class="insight-title">JPMorgan Chase</h3>
                         <p class="insight-excerpt">
-                            In a significant development for the U.S. housing market, mortgage rates have dropped to
-                            their lowest levels in more than three years following President Trump's directive for
-                            Fannie Mae and Freddie Mac to purchase $200 billion in mortgage-backed securities. The
-                            30-year fixed rate now averages 6.06%, down from 7.04% a year ago.
+                            Built and maintained financial trading systems handling billions in daily transactions.
+                            Deep expertise in regulatory compliance, risk management, and high-frequency data
+                            processing.
                         </p>
                         <div class="insight-meta">
-                            <span class="insight-date">Jan 15, 2026</span>
-                            <span class="insight-read-time">7 min read</span>
+                            <span class="insight-date">Financial Systems Engineering</span>
+                            <span class="insight-read-time">Data Infrastructure</span>
                         </div>
-                        <a href="blog/mortgage-rates-3-year-low" class="insight-link">
-                            Read Article
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </a>
                     </div>
                 </article>
 
                 <article class="insight-card">
-                    <div class="insight-image" style="background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);">
-                        <div class="insight-category">Featured Report</div>
+                    <div class="insight-image" style="background: linear-gradient(135deg, #059669 0%, #10B981 100%);">
+                        <div class="insight-category">Previous Role</div>
                     </div>
                     <div class="insight-content">
-                        <h3 class="insight-title">The State of Enterprise Fintech 2026</h3>
+                        <h3 class="insight-title">Cisco Systems</h3>
                         <p class="insight-excerpt">
-                            Comprehensive analysis of emerging trends, regulatory changes, and
-                            technology innovations shaping the future of financial services.
+                            Enterprise cloud architecture and global infrastructure deployment.
+                            Scalable systems design and network security at Fortune 500 scale.
                         </p>
                         <div class="insight-meta">
-                            <span class="insight-date">January 2026</span>
-                            <span class="insight-read-time">15 min read</span>
+                            <span class="insight-date">Cloud Infrastructure</span>
+                            <span class="insight-read-time">Enterprise Architecture</span>
                         </div>
-                        <a href="#" class="insight-link">
-                            Download Report
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </a>
                     </div>
                 </article>
 
                 <article class="insight-card">
-                    <div class="insight-image" style="background: linear-gradient(135deg, #F093FB 0%, #F5576C 100%);">
-                        <div class="insight-category">Blog</div>
+                    <div class="insight-image" style="background: linear-gradient(135deg, #7C3AED 0%, #A855F7 100%);">
+                        <div class="insight-category">Previous Role</div>
                     </div>
                     <div class="insight-content">
-                        <h3 class="insight-title">AI in Financial Risk Management</h3>
+                        <h3 class="insight-title">Palantir Technologies</h3>
                         <p class="insight-excerpt">
-                            How machine learning is revolutionizing fraud detection and
-                            risk assessment in modern banking.
+                            Defense and intelligence data platforms. Secure, air-gapped environments
+                            with strict compliance requirements and zero-failure tolerance.
                         </p>
                         <div class="insight-meta">
-                            <span class="insight-date">Dec 28, 2025</span>
-                            <span class="insight-read-time">8 min read</span>
+                            <span class="insight-date">Data Platforms</span>
+                            <span class="insight-read-time">Security & Intelligence</span>
                         </div>
-                        <a href="#" class="insight-link">
-                            Read Article
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </a>
                     </div>
                 </article>
 
                 <article class="insight-card">
-                    <div class="insight-image" style="background: linear-gradient(135deg, #4FACFE 0%, #00F2FE 100%);">
-                        <div class="insight-category">Case Study</div>
+                    <div class="insight-image" style="background: linear-gradient(135deg, #DC2626 0%, #EF4444 100%);">
+                        <div class="insight-category">Education</div>
                     </div>
                     <div class="insight-content">
-                        <h3 class="insight-title">How TechCorp Scaled to 10M Users</h3>
+                        <h3 class="insight-title">M.S. Software Engineering</h3>
                         <p class="insight-excerpt">
-                            A deep dive into how we helped a leading fintech startup
-                            scale their payment infrastructure 100x.
+                            Oklahoma Christian University. Graduate Certificate in Business Intelligence
+                            and Analytics from Illinois Institute of Technology.
                         </p>
                         <div class="insight-meta">
-                            <span class="insight-date">Dec 15, 2025</span>
-                            <span class="insight-read-time">12 min read</span>
+                            <span class="insight-date">Technical Credibility</span>
+                            <span class="insight-read-time">Academic Foundation</span>
                         </div>
-                        <a href="#" class="insight-link">
-                            Read Case Study
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </a>
                     </div>
                 </article>
 
                 <article class="insight-card">
-                    <div class="insight-image" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%);">
-                        <div class="insight-category">Blog</div>
+                    <div class="insight-image" style="background: linear-gradient(135deg, #0369A1 0%, #38BDF8 100%);">
+                        <div class="insight-category">Current Venture</div>
                     </div>
                     <div class="insight-content">
-                        <h3 class="insight-title">Blockchain in Modern Banking</h3>
+                        <h3 class="insight-title">Westley Resource</h3>
                         <p class="insight-excerpt">
-                            Exploring how blockchain technology is revolutionizing traditional banking
-                            infrastructure and creating new opportunities for financial innovation.
+                            Previously operated IT recruiting and staffing firm. This experience
+                            informs our automation solutions for recruiting agencies and service businesses.
                         </p>
                         <div class="insight-meta">
-                            <span class="insight-date">Jan 10, 2026</span>
-                            <span class="insight-read-time">6 min read</span>
+                            <span class="insight-date">Entrepreneurial Background</span>
+                            <span class="insight-read-time">Operational Experience</span>
                         </div>
-                        <a href="#" class="insight-link">
-                            Read Article
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </a>
                     </div>
                 </article>
 
                 <article class="insight-card">
-                    <div class="insight-image" style="background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);">
-                        <div class="insight-category">Tutorial</div>
+                    <div class="insight-image" style="background: linear-gradient(135deg, #4B5563 0%, #9CA3AF 100%);">
+                        <div class="insight-category">Availability</div>
                     </div>
                     <div class="insight-content">
-                        <h3 class="insight-title">Getting Started with Our API</h3>
+                        <h3 class="insight-title">Limited Engagement Slots</h3>
                         <p class="insight-excerpt">
-                            A step-by-step guide to integrating our payment API into your application,
-                            with code examples and best practices for developers.
+                            Currently accepting 4 charter clients for Q1 2026.
+                            Fractional CTO and infrastructure projects only.
+                            No cookie-cutter solutions—every engagement is custom-architected.
                         </p>
                         <div class="insight-meta">
-                            <span class="insight-date">Jan 5, 2026</span>
-                            <span class="insight-read-time">10 min read</span>
+                            <span class="insight-date">Q1 2026</span>
+                            <span class="insight-read-time">4 Slots Available</span>
                         </div>
-                        <a href="#" class="insight-link">
-                            Read Tutorial
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </a>
-                    </div>
-                </article>
-
-                <article class="insight-card">
-                    <div class="insight-image" style="background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%);">
-                        <div class="insight-category">Opinion</div>
-                    </div>
-                    <div class="insight-content">
-                        <h3 class="insight-title">The Future of Digital Payments</h3>
-                        <p class="insight-excerpt">
-                            Our CTO shares insights on emerging payment technologies and what they mean
-                            for the future of commerce and financial services.
-                        </p>
-                        <div class="insight-meta">
-                            <span class="insight-date">Dec 28, 2025</span>
-                            <span class="insight-read-time">5 min read</span>
-                        </div>
-                        <a href="#" class="insight-link">
-                            Read Opinion
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </a>
-                    </div>
-                </article>
-
-                <article class="insight-card">
-                    <div class="insight-image" style="background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);">
-                        <div class="insight-category">Blog</div>
-                    </div>
-                    <div class="insight-content">
-                        <h3 class="insight-title">Emerging Trends in Digital Payments 2026</h3>
-                        <p class="insight-excerpt">
-                            As we enter 2026, the digital payments landscape is undergoing rapid transformation driven
-                            by AI advancements, cryptocurrency adoption, and real-time global interoperability. From
-                            agentic commerce to embedded finance, discover the key trends reshaping financial
-                            transactions.
-                        </p>
-                        <div class="insight-meta">
-                            <span class="insight-date">Jan 13, 2026</span>
-                            <span class="insight-read-time">8 min read</span>
-                        </div>
-                        <a href="#" class="insight-link">
-                            Read Article
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </a>
-                    </div>
-                </article>
-
-                <article class="insight-card">
-                    <div class="insight-image" style="background: linear-gradient(135deg, #6366F1 0%, #A855F7 100%);">
-                        <div class="insight-category">Blog</div>
-                    </div>
-                    <div class="insight-content">
-                        <h3 class="insight-title">AI Revolution in Finance: Transforming Banking and Risk Management
-                        </h3>
-                        <p class="insight-excerpt">
-                            Artificial Intelligence is fundamentally reshaping the financial services landscape, with
-                            machine learning algorithms enabling unprecedented levels of automation, predictive
-                            analytics, and intelligent risk assessment. In modern banking, AI-powered systems analyze
-                            vast datasets to detect fraudulent transactions in real-time, reducing losses by up to 90%
-                            while minimizing false positives that inconvenience legitimate customers. Beyond fraud
-                            detection, AI is automating routine financial processes—from loan approvals and credit
-                            scoring to personalized investment recommendations—allowing human bankers to focus on
-                            strategic advisory roles. Predictive analytics models leverage historical data and market
-                            trends to forecast economic shifts, optimize portfolio management, and identify emerging
-                            risks before they materialize. As AI-driven risk management evolves, financial institutions
-                            are achieving greater regulatory compliance, enhanced operational efficiency, and improved
-                            customer experiences, positioning them for success in an increasingly complex and
-                            competitive global marketplace.
-                        </p>
-                        <div class="insight-meta">
-                            <span class="insight-date">Jan 13, 2026</span>
-                            <span class="insight-read-time">10 min read</span>
-                        </div>
-                        <a href="#" class="insight-link">
-                            Read Article
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </a>
                     </div>
                 </article>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">Testimonials</span>
-                <h2 class="section-title">Trusted by Industry Leaders</h2>
-            </div>
-            <div class="testimonials-slider">
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="#F59E0B">
-                            <path d="M10 1L12.5 7.5L19 8L14 12.5L15.5 19L10 15.5L4.5 19L6 12.5L1 8L7.5 7.5L10 1Z" />
-                        </svg>
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="#F59E0B">
-                            <path d="M10 1L12.5 7.5L19 8L14 12.5L15.5 19L10 15.5L4.5 19L6 12.5L1 8L7.5 7.5L10 1Z" />
-                        </svg>
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="#F59E0B">
-                            <path d="M10 1L12.5 7.5L19 8L14 12.5L15.5 19L10 15.5L4.5 19L6 12.5L1 8L7.5 7.5L10 1Z" />
-                        </svg>
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="#F59E0B">
-                            <path d="M10 1L12.5 7.5L19 8L14 12.5L15.5 19L10 15.5L4.5 19L6 12.5L1 8L7.5 7.5L10 1Z" />
-                        </svg>
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="#F59E0B">
-                            <path d="M10 1L12.5 7.5L19 8L14 12.5L15.5 19L10 15.5L4.5 19L6 12.5L1 8L7.5 7.5L10 1Z" />
-                        </svg>
-                    </div>
-                    <p class="testimonial-text">
-                        "Westley Group transformed our payment infrastructure. We went from
-                        processing 1,000 transactions per day to over 100,000 with zero downtime.
-                        Their platform is simply exceptional."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar"
-                            style="background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);">
-                            <span>SK</span>
-                        </div>
-                        <div class="author-info">
-                            <div class="author-name">Sarah Kim</div>
-                            <div class="author-title">CTO, FinanceFlow</div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="#F59E0B">
-                            <path d="M10 1L12.5 7.5L19 8L14 12.5L15.5 19L10 15.5L4.5 19L6 12.5L1 8L7.5 7.5L10 1Z" />
-                        </svg>
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="#F59E0B">
-                            <path d="M10 1L12.5 7.5L19 8L14 12.5L15.5 19L10 15.5L4.5 19L6 12.5L1 8L7.5 7.5L10 1Z" />
-                        </svg>
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="#F59E0B">
-                            <path d="M10 1L12.5 7.5L19 8L14 12.5L15.5 19L10 15.5L4.5 19L6 12.5L1 8L7.5 7.5L10 1Z" />
-                        </svg>
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="#F59E0B">
-                            <path d="M10 1L12.5 7.5L19 8L14 12.5L15.5 19L10 15.5L4.5 19L6 12.5L1 8L7.5 7.5L10 1Z" />
-                        </svg>
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="#F59E0B">
-                            <path d="M10 1L12.5 7.5L19 8L14 12.5L15.5 19L10 15.5L4.5 19L6 12.5L1 8L7.5 7.5L10 1Z" />
-                        </svg>
-                    </div>
-                    <p class="testimonial-text">
-                        "The analytics platform gives us insights we never had before. Real-time
-                        fraud detection has saved us millions. Best investment we've made."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar"
-                            style="background: linear-gradient(135deg, #F093FB 0%, #F5576C 100%);">
-                            <span>MJ</span>
-                        </div>
-                        <div class="author-info">
-                            <div class="author-name">Michael Johnson</div>
-                            <div class="author-title">VP of Operations, PaySecure</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="#F59E0B">
-                            <path d="M10 1L12.5 7.5L19 8L14 12.5L15.5 19L10 15.5L4.5 19L6 12.5L1 8L7.5 7.5L10 1Z" />
-                        </svg>
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="#F59E0B">
-                            <path d="M10 1L12.5 7.5L19 8L14 12.5L15.5 19L10 15.5L4.5 19L6 12.5L1 8L7.5 7.5L10 1Z" />
-                        </svg>
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="#F59E0B">
-                            <path d="M10 1L12.5 7.5L19 8L14 12.5L15.5 19L10 15.5L4.5 19L6 12.5L1 8L7.5 7.5L10 1Z" />
-                        </svg>
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="#F59E0B">
-                            <path d="M10 1L12.5 7.5L19 8L14 12.5L15.5 19L10 15.5L4.5 19L6 12.5L1 8L7.5 7.5L10 1Z" />
-                        </svg>
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="#F59E0B">
-                            <path d="M10 1L12.5 7.5L19 8L14 12.5L15.5 19L10 15.5L4.5 19L6 12.5L1 8L7.5 7.5L10 1Z" />
-                        </svg>
-                    </div>
-                    <p class="testimonial-text">
-                        "Implementation was seamless. Their team supported us every step of the way.
-                        We launched our banking product 3 months ahead of schedule."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar"
-                            style="background: linear-gradient(135deg, #4FACFE 0%, #00F2FE 100%);">
-                            <span>EP</span>
-                        </div>
-                        <div class="author-info">
-                            <div class="author-name">Elena Petrov</div>
-                            <div class="author-title">CEO, NeoBank Solutions</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
+    <!-- CTA Section (Fixed) -->
     <section class="cta-section">
         <div class="container">
             <div class="cta-content">
-                <h2 class="cta-title">Ready to Transform Your Financial Operations?</h2>
+                <h2 class="cta-title">Ready to Deploy Enterprise AI?</h2>
                 <p class="cta-subtitle">
-                    Join 500+ enterprise clients who trust Westley Group for their fintech infrastructure
+                    Select charter clients accepted for Q1 2026.
+                    Fractional CTO services and AI infrastructure projects.
                 </p>
                 <div class="cta-buttons">
                     <button class="btn btn-primary" id="ctaDemo">
-                        <span>Schedule a Demo</span>
+                        <span>Schedule Consultation</span>
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                             <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2"
                                 stroke-linecap="round" />
                         </svg>
                     </button>
                     <button class="btn btn-secondary" id="ctaContact">
-                        <span>Contact Sales</span>
+                        <span>Email Directly</span>
                     </button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer" id="about">
+    <!-- Footer (Fixed) -->
+    <footer class="footer" id="contact">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
@@ -807,64 +538,40 @@ console.<span class="code-function">log</span>(payment.<span class="code-propert
                         <span class="logo-text">Westley Group</span>
                     </div>
                     <p class="footer-description">
-                        Enterprise fintech solutions that power the future of financial services.
+                        Fractional CTO services and AI infrastructure consulting
+                        for regulated enterprises. Founded 2024.
                     </p>
                     <div class="social-links">
-                        <a href="#" class="social-link" aria-label="LinkedIn">
+                        <a href="https://linkedin.com/in/westleyresource" class="social-link" aria-label="LinkedIn">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
                                 <path
                                     d="M4.5 2.5C3.67 2.5 3 3.17 3 4C3 4.83 3.67 5.5 4.5 5.5C5.33 5.5 6 4.83 6 4C6 3.17 5.33 2.5 4.5 2.5ZM3 7V17H6V7H3ZM8 7V17H11V11.5C11 9.57 13.43 9.39 13.43 11.5V17H16.5V10.38C16.5 6.75 12.93 6.89 11 8.56V7H8Z" />
-                            </svg>
-                        </a>
-                        <a href="#" class="social-link" aria-label="Twitter">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-                                <path
-                                    d="M6.29 18.25C13.84 18.25 17.96 12.01 17.96 6.58C17.96 6.39 17.96 6.21 17.95 6.03C18.74 5.46 19.42 4.75 19.96 3.94C19.24 4.27 18.46 4.49 17.64 4.59C18.49 4.09 19.13 3.29 19.43 2.34C18.65 2.81 17.79 3.14 16.88 3.32C16.15 2.53 15.11 2.03 13.96 2.03C11.77 2.03 9.99 3.81 9.99 6C9.99 6.32 10.03 6.63 10.1 6.93C6.74 6.76 3.76 5.18 1.77 2.77C1.42 3.39 1.22 4.09 1.22 4.84C1.22 6.26 1.95 7.51 3.05 8.24C2.38 8.22 1.75 8.04 1.19 7.74C1.19 7.76 1.19 7.78 1.19 7.8C1.19 9.72 2.56 11.32 4.38 11.7C4.04 11.8 3.68 11.85 3.31 11.85C3.05 11.85 2.8 11.83 2.55 11.78C3.06 13.36 4.53 14.5 6.29 14.53C4.93 15.59 3.22 16.22 1.36 16.22C1.03 16.22 0.71 16.2 0.39 16.17C2.17 17.29 4.28 17.94 6.55 17.94" />
-                            </svg>
-                        </a>
-                        <a href="#" class="social-link" aria-label="GitHub">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-                                <path
-                                    d="M10 0C4.48 0 0 4.48 0 10C0 14.42 2.87 18.17 6.84 19.5C7.34 19.58 7.5 19.27 7.5 19C7.5 18.77 7.5 18.14 7.5 17.31C4.73 17.91 4.14 16.03 4.14 16.03C3.68 14.87 3.03 14.56 3.03 14.56C2.12 13.94 3.1 13.95 3.1 13.95C4.1 14.02 4.63 14.99 4.63 14.99C5.5 16.52 6.97 16.09 7.54 15.85C7.63 15.22 7.89 14.78 8.17 14.55C5.95 14.32 3.62 13.45 3.62 9.58C3.62 8.48 4.01 7.59 4.65 6.89C4.55 6.66 4.2 5.62 4.75 4.22C4.75 4.22 5.59 3.94 7.5 5.25C8.29 5.05 9.15 4.95 10 4.95C10.85 4.95 11.71 5.05 12.5 5.25C14.41 3.94 15.25 4.22 15.25 4.22C15.8 5.62 15.45 6.66 15.35 6.89C15.99 7.59 16.38 8.48 16.38 9.58C16.38 13.46 14.04 14.32 11.81 14.55C12.17 14.85 12.5 15.45 12.5 16.36C12.5 17.71 12.5 18.81 12.5 19.12C12.5 19.39 12.66 19.7 13.17 19.6C17.14 18.16 20 14.42 20 10C20 4.48 15.52 0 10 0Z" />
                             </svg>
                         </a>
                     </div>
                 </div>
 
                 <div class="footer-section">
-                    <h4 class="footer-title">Solutions</h4>
+                    <h4 class="footer-title">Services</h4>
                     <ul class="footer-links">
-                        <li><a href="#">Payment Processing</a></li>
-                        <li><a href="#">Banking-as-a-Service</a></li>
-                        <li><a href="#">Analytics & Insights</a></li>
-                        <li><a href="#">Risk Management</a></li>
-                        <li><a href="#">Identity Verification</a></li>
+                        <li><a href="#services">Lead Response Automation</a></li>
+                        <li><a href="#services">Private LLM Deployment</a></li>
+                        <li><a href="#services">Fractional CTO</a></li>
+                        <li><a href="#services">AI Governance</a></li>
+                        <li><a href="#services">Technical Due Diligence</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
                     <h4 class="footer-title">Company</h4>
                     <ul class="footer-links">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Press</a></li>
-                        <li><a href="#">Partners</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#about">About / Background</a></li>
+                        <li><a href="#approach">Approach</a></li>
+                        <li><span style="color: #6b7280;">Blog (Coming Soon)</span></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
-                    <h4 class="footer-title">Resources</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">Documentation</a></li>
-                        <li><a href="#">API Reference</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Case Studies</a></li>
-                        <li><a href="#">Support</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section" id="contact">
                     <h4 class="footer-title">Contact</h4>
                     <ul class="footer-links">
                         <li>
@@ -872,14 +579,7 @@ console.<span class="code-function">log</span>(payment.<span class="code-propert
                                 <path d="M2 3L8 8L14 3V2L8 7L2 2V3Z" />
                                 <path d="M2 2H14V12H2V2Z" fill="none" stroke="currentColor" stroke-width="1.5" />
                             </svg>
-                            <a href="mailto:hello@westley-group.com">hello@westley-group.com</a>
-                        </li>
-                        <li>
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-                                <path
-                                    d="M3 2C2.45 2 2 2.45 2 3V13C2 13.55 2.45 14 3 14H13C13.55 14 14 13.55 14 13V3C14 2.45 13.55 2 13 2H3ZM8 4C9.66 4 11 5.34 11 7C11 8.66 9.66 10 8 10C6.34 10 5 8.66 5 7C5 5.34 6.34 4 8 4Z" />
-                            </svg>
-                            <span>613 Washington Blvd. #1342, Jersey City, NJ 07310</span>
+                            <a href="mailto:kishore@westley-group.com">kishore@westley-group.com</a>
                         </li>
                         <li>
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
@@ -888,24 +588,58 @@ console.<span class="code-function">log</span>(payment.<span class="code-propert
                             </svg>
                             <a href="tel:+17325188899">+1 (732) 518-8899</a>
                         </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path
+                                    d="M8 0C4.69 0 2 2.69 2 6C2 10.5 8 16 8 16C8 16 14 10.5 14 6C14 2.69 11.31 0 8 0ZM8 8C6.9 8 6 7.1 6 6C6 4.9 6.9 4 8 4C9.1 4 10 4.9 10 6C10 7.1 9.1 8 8 8Z" />
+                            </svg>
+                            <span>New Jersey, USA (Remote)</span>
+                        </li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
                 <p class="footer-copyright">
-                    © 2026 Westley Group. All rights reserved.
+                    © 2026 Westley Group LLC. All rights reserved.
                 </p>
                 <div class="footer-legal">
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms of Service</a>
-                    <a href="#">Security</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function () {
+            document.getElementById('navLinks').classList.toggle('active');
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+
+        // Feature tabs (if needed)
+        document.querySelectorAll('.feature-item').forEach(item => {
+            item.addEventListener('click', function () {
+                document.querySelectorAll('.feature-item').forEach(i => i.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
 </body>
 
 </html>
