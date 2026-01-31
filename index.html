@@ -593,12 +593,13 @@
             </div>
         </div>
     </footer>
-
     <script>
+        // Mobile menu toggle
         document.getElementById('mobileMenuBtn').addEventListener('click', function () {
             document.getElementById('navLinks').classList.toggle('active');
         });
 
+        // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -612,11 +613,32 @@
             });
         });
 
+        // Feature tabs
         document.querySelectorAll('.feature-item').forEach(item => {
             item.addEventListener('click', function () {
                 document.querySelectorAll('.feature-item').forEach(i => i.classList.remove('active'));
                 this.classList.add('active');
             });
+        });
+
+        // CTA BUTTON FUNCTIONALITY
+        document.getElementById('scheduleDemo').addEventListener('click', function () {
+            window.location.href = 'mailto:hello@westley-group.com?subject=Schedule%20Consultation%20-%20Q1%202026%20Charter%20Client&body=Hi%20Westley%20Group%2C%0A%0AI%20saw%20your%20website%20and%20would%20like%20to%20schedule%20a%20consultation%20about%20AI%20infrastructure%20services.%0A%0ACompany%3A%20%0AIndustry%3A%20%0ACurrent%20challenge%3A%20%0A%0ABest%20regards';
+        });
+
+        document.getElementById('ctaDemo').addEventListener('click', function () {
+            window.location.href = 'mailto:hello@westley-group.com?subject=Schedule%20Consultation%20-%20Q1%202026%20Charter%20Client&body=Hi%20Westley%20Group%2C%0A%0AI%20saw%20your%20website%20and%20would%20like%20to%20schedule%20a%20consultation%20about%20AI%20infrastructure%20services.%0A%0ACompany%3A%20%0AIndustry%3A%20%0ACurrent%20challenge%3A%20%0A%0ABest%20regards';
+        });
+
+        document.getElementById('viewServices').addEventListener('click', function () {
+            document.getElementById('services').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        });
+
+        document.getElementById('ctaContact').addEventListener('click', function () {
+            window.location.href = 'mailto:hello@westley-group.com?subject=Inquiry%20-%20The%20Westley%20Group&body=Hi%20Westley%20Group%20Team%2C%0A%0AI%20have%20a%20question%20about%20your%20services.%0A%0A%5BYour%20message%20here%5D%0A%0ABest%20regards';
         });
     </script>
 </body>
