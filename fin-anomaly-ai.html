@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinAnomaly AI | Anomaly Intelligence for Every Fintech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981',
+                        accent: '#6366F1',
+                        background: '#0A0C10',
+                        surface: '#12141C',
+                        border: '#1F2937',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        glow: '0 0 20px rgba(59, 130, 246, 0.2)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0A0C10;
+            color: #F9FAFB;
+        }
+        .glass-card {
+            background: rgba(18, 20, 28, 0.5);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #3B82F6, #6366F1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-background/80 backdrop-blur-md">
+        <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <img src="logo.png" alt="Westley Group Logo" class="w-8 h-8 object-contain">
+                <span class="text-xl font-bold tracking-tight uppercase">Westley <span class="text-primary">Group</span></span>
+            </div>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#product" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Product</a>
+                <a href="#how-it-works" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">How it works</a>
+                <a href="#pricing" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Pricing</a>
+                <a href="#" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Docs</a>
+                <button class="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-lg text-sm font-bold shadow-glow transition-all active:scale-95">Get API Key</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="product" class="pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden relative">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 pointer-events-none">
+            <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary/20 blur-[120px] rounded-full"></div>
+            <div class="absolute bottom-[-10%] right-[-10%] w-[30%] h-[30%] bg-accent/20 blur-[120px] rounded-full"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="flex flex-col gap-8">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold w-fit">
+                    <span class="flex h-2 w-2 rounded-full bg-primary animate-pulse"></span>
+                    v2.0 Now Live: Explainable AI
+                </div>
+                <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.1]">
+                    Anomaly Intelligence for <br>
+                    <span class="gradient-text">Every Fintech</span> — One Simple API
+                </h1>
+                <p class="text-xl text-gray-400 max-w-lg leading-relaxed">
+                    Detect fraud, unusual spending, errors, and surprises in real time. Integrate in minutes. No ML team required.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button class="bg-primary hover:bg-primary/90 text-white px-10 py-4 rounded-xl font-bold shadow-glow transition-all active:scale-95">Try Sandbox Free</button>
+                    <button class="bg-surface border border-white/10 hover:bg-surface/80 text-white px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all active:scale-95">
+                        <i data-lucide="play" class="w-4 h-4"></i> Watch Demo
+                    </button>
+                </div>
+                <div class="flex items-center gap-6 mt-4 opacity-50">
+                    <span class="text-xs font-medium uppercase tracking-widest">SOC-2 Ready</span>
+                    <span class="text-xs font-medium uppercase tracking-widest">Privacy-First</span>
+                    <span class="text-xs font-medium uppercase tracking-widest">GDPR Ready</span>
+                </div>
+            </div>
+
+            <div class="relative">
+                <div class="glass-card p-6 border-white/10 shadow-2xl relative z-10 animate-float">
+                    <div class="flex gap-1.5 mb-4 border-b border-white/5 pb-4">
+                        <div class="w-3 h-3 rounded-full bg-red-500/50"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500/50"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500/50"></div>
+                        <span class="ml-2 text-[10px] text-gray-500 font-mono">transaction_analysis.js</span>
+                    </div>
+                    <code class="text-sm font-mono block space-y-1">
+                        <p><span class="text-primary">const</span> alert = <span class="text-primary">await</span> fin.analyze({</p>
+                        <p class="pl-4 text-gray-400">amount: <span class="text-amber-400">4500.00</span>,</p>
+                        <p class="pl-4 text-gray-400">merchant: <span class="text-amber-400">"Lux Store"</span>,</p>
+                        <p class="pl-4 text-gray-400">user_id: <span class="text-amber-400">"usr_01J"</span></p>
+                        <p>});</p>
+                        <p class="mt-4 text-secondary font-semibold">// Returns: Anomaly detected (98%)</p>
+                    </code>
+                </div>
+                <div class="glass-card p-5 border-primary/30 shadow-2xl absolute -bottom-10 -right-5 md:-right-10 z-20 bg-surface/90 max-w-[280px]">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-8 h-8 rounded-full bg-red-500/20 flex items-center justify-center">
+                            <div class="w-2 h-2 rounded-full bg-red-500"></div>
+                        </div>
+                        <p class="text-xs font-bold uppercase tracking-wider">Critical Alert</p>
+                    </div>
+                    <p class="text-[11px] leading-relaxed text-gray-300">
+                        "User spent <span class="text-white font-bold">25x</span> their daily median. Merchant jurisdiction is inconsistent with user history."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="py-24 bg-surface/30">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">How it works</h2>
+                <p class="text-gray-400">Intelligent alerts in less than 200ms.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 text-center group hover:border-primary/50 transition-colors">
+                    <div class="w-16 h-16 rounded-2xl bg-blue-500/10 flex items-center justify-center mb-6 mx-auto">
+                        <i data-lucide="database" class="w-8 h-8 text-blue-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Send Data</h3>
+                    <p class="text-gray-400 text-sm">Forward transaction metadata via our secure REST API.</p>
+                </div>
+                <div class="glass-card p-8 text-center group hover:border-primary/50 transition-colors">
+                    <div class="w-16 h-16 rounded-2xl bg-amber-500/10 flex items-center justify-center mb-6 mx-auto">
+                        <i data-lucide="zap" class="w-8 h-8 text-amber-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">AI Analysis</h3>
+                    <p class="text-gray-400 text-sm">Proprietary ML models analyze patterns in real-time.</p>
+                </div>
+                <div class="glass-card p-8 text-center group hover:border-primary/50 transition-colors">
+                    <div class="w-16 h-16 rounded-2xl bg-emerald-500/10 flex items-center justify-center mb-6 mx-auto">
+                        <i data-lucide="file-text" class="w-8 h-8 text-emerald-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Get Insights</h3>
+                    <p class="text-gray-400 text-sm">Receive scores and human-readable explanations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="py-24">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Pricing</h2>
+                <p class="text-gray-400">Scale as you grow.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 flex flex-col">
+                    <h3 class="font-bold mb-2">Free</h3>
+                    <div class="text-4xl font-bold mb-4">$0 <span class="text-sm text-gray-500">/mo</span></div>
+                    <ul class="space-y-4 mb-8 text-sm text-gray-400 flex-grow">
+                        <li><i data-lucide="check" class="inline w-4 h-4 text-primary mr-2"></i>1,000 API calls</li>
+                        <li><i data-lucide="check" class="inline w-4 h-4 text-primary mr-2"></i>Sandbox access</li>
+                    </ul>
+                    <button class="w-full border border-white/10 hover:bg-white/5 py-3 rounded-lg font-bold">Start Free</button>
+                </div>
+                <div class="glass-card p-8 flex flex-col border-primary/50 ring-2 ring-primary/20 scale-105">
+                    <h3 class="font-bold mb-2">Growth</h3>
+                    <div class="text-4xl font-bold mb-4">$99 <span class="text-sm text-gray-500">/mo</span></div>
+                    <ul class="space-y-4 mb-8 text-sm text-gray-400 flex-grow">
+                        <li><i data-lucide="check" class="inline w-4 h-4 text-primary mr-2"></i>100k API calls</li>
+                        <li><i data-lucide="check" class="inline w-4 h-4 text-primary mr-2"></i>Priority support</li>
+                        <li><i data-lucide="check" class="inline w-4 h-4 text-primary mr-2"></i>AI Explanations</li>
+                    </ul>
+                    <button class="w-full bg-primary hover:bg-primary/90 py-3 rounded-lg font-bold shadow-glow">Get Started</button>
+                </div>
+                <div class="glass-card p-8 flex flex-col">
+                    <h3 class="font-bold mb-2">Enterprise</h3>
+                    <div class="text-4xl font-bold mb-4">Custom</div>
+                    <ul class="space-y-4 mb-8 text-sm text-gray-400 flex-grow">
+                        <li><i data-lucide="check" class="inline w-4 h-4 text-primary mr-2"></i>Unlimited calls</li>
+                        <li><i data-lucide="check" class="inline w-4 h-4 text-primary mr-2"></i>SLA Guarantees</li>
+                        <li><i data-lucide="check" class="inline w-4 h-4 text-primary mr-2"></i>Dedicated support</li>
+                    </ul>
+                    <button class="w-full border border-white/10 hover:bg-white/5 py-3 rounded-lg font-bold">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-20 border-t border-white/5 bg-surface/10">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-left mb-12">
+            <div>
+                <div class="flex items-center gap-2 mb-6">
+                    <img src="logo.png" alt="Westley Group Logo" class="w-8 h-8 object-contain">
+                    <span class="text-xl font-bold uppercase tracking-tight">Westley Group</span>
+                </div>
+                <p class="text-sm text-gray-500 leading-relaxed">
+                    Anomaly intelligence for modern fintech platforms. Catch fraud, unusual spending, and surprises in real time.
+                </p>
+            </div>
+            <div>
+                <h4 class="font-bold text-sm mb-6 uppercase tracking-wider">Contact</h4>
+                <ul class="space-y-4 text-sm text-gray-500">
+                    <li><a href="mailto:hello@westley-group.com" class="hover:text-white transition-colors">hello@westley-group.com</a></li>
+                    <li>+1 (732) 518-8899</li>
+                </ul>
+            </div>
+            <div class="lg:col-span-2">
+                <h4 class="font-bold text-sm mb-6 uppercase tracking-wider">Location</h4>
+                <p class="text-sm text-gray-500">
+                    613 Washington Blvd. #1342, Jersey City, NJ 07310
+                </p>
+            </div>
+        </div>
+        <div class="container mx-auto px-6 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-gray-600 text-xs">© 2026 Westley Group LLC. All rights reserved.</p>
+            <div class="flex items-center gap-6">
+                <span class="text-[10px] font-bold text-gray-700 px-2 py-0.5 rounded border border-gray-800">SOC-2</span>
+                <span class="text-[10px] font-bold text-gray-700 px-2 py-0.5 rounded border border-gray-800">GDPR</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
