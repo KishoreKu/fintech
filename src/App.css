@@ -1,0 +1,45 @@
+/* App-specific styles */
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: auto;
+}
+
+/* Ensure sections stack properly */
+main {
+  position: relative;
+}
+
+/* Card hover effects */
+.card-rounded {
+  transition: transform 0.3s ease;
+}
+
+/* Image loading optimization */
+img {
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F6F6F2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #B8B9F7;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a0a1e0;
+}
+
+/* Selection color */
+::selection {
+  background: #B8B9F7;
+  color: #111216;
+}
