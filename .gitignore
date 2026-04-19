@@ -46,6 +46,12 @@ yarn-error.log*
 *.backup
 *~
 
+# Node / Vite
+node_modules/
+dist/
+dist-ssr/
+*.local
+
 # Backend
 backend/node_modules/
 backend/.env
