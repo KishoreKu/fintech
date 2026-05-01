@@ -2,12 +2,34 @@ import { useRef, useLayoutEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Search, Palette, Rocket } from 'lucide-react';
+import type { RefObject } from 'react';
 
 gsap.registerPlugin(ScrollTrigger);
 
 interface ProcessSectionProps {
   className?: string;
 }
+
+const processes = [
+  {
+    number: '01',
+    title: 'Discover',
+    description: 'We map the problem, the data, and the user journey—then define the real constraints.',
+    icon: Search,
+  },
+  {
+    number: '02',
+    title: 'Design',
+    description: 'Interfaces, messaging, and systems architecture—built for speed and clarity.',
+    icon: Palette,
+  },
+  {
+    number: '03',
+    title: 'Deploy',
+    description: 'Ship, measure, and automate. We tune the system until it performs.',
+    icon: Rocket,
+  },
+];
 
 const ProcessSection = ({ className = '' }: ProcessSectionProps) => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -86,29 +108,7 @@ const ProcessSection = ({ className = '' }: ProcessSectionProps) => {
     return () => ctx.revert();
   }, []);
 
-  const processes = [
-    {
-      number: '01',
-      title: 'Discover',
-      description: 'We map the problem, the data, and the user journey—then define the real constraints.',
-      icon: Search,
-      ref: card1Ref,
-    },
-    {
-      number: '02',
-      title: 'Design',
-      description: 'Interfaces, messaging, and systems architecture—built for speed and clarity.',
-      icon: Palette,
-      ref: card2Ref,
-    },
-    {
-      number: '03',
-      title: 'Deploy',
-      description: 'Ship, measure, and automate. We tune the system until it performs.',
-      icon: Rocket,
-      ref: card3Ref,
-    },
-  ];
+  const cardRefs: RefObject<HTMLDivElement | null>[] = [card1Ref, card2Ref, card3Ref];
 
   return (
     <section
@@ -137,7 +137,7 @@ const ProcessSection = ({ className = '' }: ProcessSectionProps) => {
         {processes.map((process, idx) => (
           <div key={idx}>
             <div
-              ref={process.ref}
+              ref={cardRefs[idx]}
               className="card-rounded card-shadow bg-white will-change-transform flex items-start gap-8"
               style={{
                 padding: '4vh 3vw',

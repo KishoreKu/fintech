@@ -107,9 +107,8 @@ const InsightsSection = ({ className = '' }: InsightsSectionProps) => {
       >
         {/* Left Accent Card */}
         <div
-          className="card-rounded card-shadow accent-bg flex items-center"
+          className="card-rounded card-shadow accent-bg flex items-center md:w-[min(32vw,400px)]"
           style={{
-            width: 'md:min(32vw, 400px)',
             padding: '4vh 3vw',
           }}
         >

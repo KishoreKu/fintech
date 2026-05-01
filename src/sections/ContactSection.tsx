@@ -9,6 +9,29 @@ interface ContactSectionProps {
   className?: string;
 }
 
+const partners = [
+  {
+    name: 'Microsoft',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg',
+  },
+  {
+    name: 'Google',
+    logo: 'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png',
+  },
+  {
+    name: 'AWS',
+    logo: 'https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png',
+  },
+  {
+    name: 'Databricks',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/9/9d/Databricks-logo.svg',
+  },
+  {
+    name: 'Adobe',
+    logo: 'https://www.adobe.com/content/dam/cc/icons/adobe_wordmark_red.svg',
+  },
+];
+
 const ContactSection = ({ className = '' }: ContactSectionProps) => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const card1Ref = useRef<HTMLDivElement>(null);
@@ -163,6 +186,22 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
               </a>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Partner Marquee */}
+      <div className="partner-marquee border-y border-white/10 mb-10" aria-label="Technology partners">
+        <div className="partner-marquee__track">
+          {[...partners, ...partners, ...partners].map((partner, index) => (
+            <div key={`${partner.name}-${index}`} className="partner-marquee__item">
+              <img
+                src={partner.logo}
+                alt={partner.name}
+                className="partner-marquee__logo"
+                loading="lazy"
+              />
+            </div>
+          ))}
         </div>
       </div>
 
