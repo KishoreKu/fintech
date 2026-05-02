@@ -148,20 +148,28 @@ function App() {
             }}
           />
 
-          {/* Video BG */}
-          <div className="absolute inset-0 opacity-30">
+          {/* Technical Video BG — city infrastructure / aerial */}
+          <div className="absolute inset-0 opacity-45">
             <video
-              className="hero-background-video grayscale"
+              className="hero-background-video"
               autoPlay
               muted
               loop
               playsInline
               preload="auto"
               aria-hidden="true"
+              style={{ filter: 'saturate(0.3) brightness(0.55)' }}
             >
-              <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
+              {/* Primary: night city aerial / infrastructure */}
+              <source src="https://videos.pexels.com/video-files/3571264/3571264-uhd_2560_1440_30fps.mp4" type="video/mp4" />
+              {/* Fallback 1: city lights timelapse */}
+              <source src="https://videos.pexels.com/video-files/1849899/1849899-hd_1920_1080_24fps.mp4" type="video/mp4" />
+              {/* Fallback 2: general tech */}
+              <source src="https://videos.pexels.com/video-files/2278095/2278095-hd_1920_1080_25fps.mp4" type="video/mp4" />
             </video>
-            <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />
+            {/* Cinematic vignette + bottom fade */}
+            <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.6) 100%)' }} />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black" />
           </div>
 
           <div className="relative flex min-h-screen flex-col justify-end px-[6vw] pb-[10vh] pt-32">
@@ -219,72 +227,102 @@ function App() {
           </div>
         </section>
 
-        {/* ── CAPABILITIES ─────────────────────────────────────────────────── */}
-        <section id="platform" className="bg-[#050505] px-[6vw] py-32 text-white border-t border-white/[0.06]">
+        {/* ── CAPABILITIES — light section (Palantir-style) ─────────────────── */}
+        <section id="platform" className="bg-[#f9f9f7] px-[6vw] py-32 text-black border-t border-black/[0.06]">
           <div className="grid gap-16 lg:grid-cols-[0.7fr_1.3fr]">
             <div className="sticky top-32 h-fit">
-              <p className="mb-6 text-micro text-[#2B59FF] font-bold reveal">Capabilities</p>
-              <h2 className="text-display text-[clamp(34px,5vw,68px)] leading-[1] text-white reveal reveal-delay-1">
+              <p className="mb-6 text-[10px] font-mono tracking-[0.2em] uppercase font-bold text-[#2B59FF] reveal">Capabilities</p>
+              <h2 className="text-display text-[clamp(34px,5vw,68px)] leading-[1] text-black reveal reveal-delay-1">
                 Engineered for<br />operational clarity.
               </h2>
               <div className="mt-12 space-y-4 reveal reveal-delay-2">
-                <div className="h-px w-24 bg-[#2B59FF]/50" />
-                <p className="text-[16px] text-white/40 leading-relaxed max-w-sm">
+                <div className="h-px w-24 bg-[#2B59FF]" />
+                <p className="text-[16px] text-black/50 leading-relaxed max-w-sm">
                   We replace fragmented tools with unified systems that move data from spreadsheets into governed production.
                 </p>
               </div>
             </div>
 
-            <div className="grid gap-px bg-white/[0.06] md:grid-cols-2 border border-white/[0.06]">
+            <div className="grid gap-px bg-black/[0.08] md:grid-cols-2 border border-black/[0.08]">
               {capabilities.map((cap, i) => (
                 <article
                   key={cap.title}
-                  className="reveal bg-[#050505] p-10 transition-all duration-500 hover:bg-[#0a0a0a] hover:border-[#2B59FF]/30 hover:shadow-[0_0_40px_rgba(43,89,255,0.08)] border border-transparent"
+                  className="reveal bg-[#f9f9f7] p-10 transition-all duration-500 hover:bg-white hover:shadow-[0_8px_40px_rgba(0,0,0,0.08)] border border-transparent hover:border-[#2B59FF]/20"
                   style={{ transitionDelay: `${i * 80}ms` }}
                 >
                   <div className="mb-16 flex items-center justify-between">
-                    <span className="text-micro font-bold text-white/20">{cap.eyebrow}</span>
-                    <cap.icon className="h-6 w-6 text-[#2B59FF]/50" />
+                    <span className="text-[10px] font-mono tracking-[0.2em] uppercase font-bold text-black/25">{cap.eyebrow}</span>
+                    <cap.icon className="h-6 w-6 text-[#2B59FF]/70" />
                   </div>
-                  <h3 className="mb-6 text-[26px] font-medium leading-tight text-white">{cap.title}</h3>
-                  <p className="text-[15px] leading-relaxed text-white/45">{cap.copy}</p>
-                  <div className="mt-12 h-px w-8 bg-[#2B59FF]/30" />
+                  <h3 className="mb-6 text-[26px] font-medium leading-tight text-black">{cap.title}</h3>
+                  <p className="text-[15px] leading-relaxed text-black/55">{cap.copy}</p>
+                  <div className="mt-12 h-px w-8 bg-[#2B59FF]/40" />
                 </article>
               ))}
             </div>
           </div>
         </section>
 
-        {/* ── WORK ─────────────────────────────────────────────────────────── */}
-        <section id="work" className="relative bg-black px-[6vw] py-32 text-white overflow-hidden border-t border-white/[0.06]">
+        {/* ── WORK — technical video center piece ──────────────────────────── */}
+        <section id="work" className="relative bg-[#0a0c10] px-[6vw] py-32 text-white overflow-hidden border-t border-white/[0.06]">
+          {/* Subtle grid */}
           <div
-            className="absolute inset-0 opacity-[0.06] pointer-events-none"
+            className="absolute inset-0 opacity-[0.05] pointer-events-none"
             style={{
-              backgroundImage: `linear-gradient(to right, #ffffff10 1px, transparent 1px), linear-gradient(to bottom, #ffffff10 1px, transparent 1px)`,
-              backgroundSize: '120px 120px',
+              backgroundImage: `linear-gradient(to right, #ffffff12 1px, transparent 1px), linear-gradient(to bottom, #ffffff12 1px, transparent 1px)`,
+              backgroundSize: '80px 80px',
             }}
           />
-          {/* Blue radial behind video */}
-          <div className="absolute left-0 top-0 w-1/2 h-full pointer-events-none"
-            style={{ background: 'radial-gradient(ellipse at 30% 50%, rgba(43,89,255,0.06) 0%, transparent 60%)' }}
+          {/* Deep blue atmosphere */}
+          <div className="absolute inset-0 pointer-events-none"
+            style={{ background: 'radial-gradient(ellipse at 40% 60%, rgba(43,89,255,0.07) 0%, transparent 55%)' }}
           />
 
           <div className="grid gap-20 lg:grid-cols-2 lg:items-center relative z-10">
-            <div className="reveal relative aspect-video overflow-hidden border border-[#2B59FF]/20 shadow-[0_0_60px_rgba(43,89,255,0.15)] bg-white/[0.03] grayscale hover:grayscale-0 transition-all duration-700">
-              <video
-                className="w-full h-full object-cover opacity-60"
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="metadata"
-                poster="/featured_work_main.jpg"
-              >
-                <source src="https://samplelib.com/mp4/sample-5s.mp4" type="video/mp4" />
-              </video>
-              <div className="absolute top-4 left-4 flex items-center gap-3">
-                <span className="h-1.5 w-1.5 bg-[#2B59FF] rounded-full animate-pulse" />
-                <span className="text-[9px] font-mono tracking-widest text-white/40 uppercase">Active Deployment Stream</span>
+            {/* Technical video — server room / data operations */}
+            <div className="reveal relative overflow-hidden shadow-[0_0_80px_rgba(43,89,255,0.2)] group">
+              {/* Aspect ratio wrapper */}
+              <div className="relative aspect-video">
+                <video
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  poster="/featured_work_main.jpg"
+                >
+                  {/* Primary: server room / data center */}
+                  <source src="https://videos.pexels.com/video-files/3252912/3252912-hd_1920_1080_25fps.mp4" type="video/mp4" />
+                  {/* Fallback 1: tech/coding */}
+                  <source src="https://videos.pexels.com/video-files/5483077/5483077-hd_1920_1080_30fps.mp4" type="video/mp4" />
+                  {/* Fallback 2 */}
+                  <source src="https://videos.pexels.com/video-files/3129957/3129957-hd_1920_1080_25fps.mp4" type="video/mp4" />
+                </video>
+                {/* Blue tint overlay */}
+                <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(43,89,255,0.12) 0%, transparent 50%)', mixBlendMode: 'screen' }} />
+                {/* Scan-line aesthetic */}
+                <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'repeating-linear-gradient(0deg, rgba(255,255,255,0.5) 0px, transparent 1px, transparent 3px)', backgroundSize: '100% 4px' }} />
+                {/* HUD overlay */}
+                <div className="absolute inset-0 border border-[#2B59FF]/25" />
+              </div>
+              {/* HUD top bar */}
+              <div className="absolute top-0 left-0 right-0 flex items-center justify-between px-4 py-3 bg-gradient-to-b from-black/70 to-transparent">
+                <div className="flex items-center gap-3">
+                  <span className="h-1.5 w-1.5 bg-[#2B59FF] rounded-full animate-pulse" />
+                  <span className="text-[9px] font-mono tracking-widest text-white/60 uppercase">Live · Data Operations Center</span>
+                </div>
+                <span className="text-[9px] font-mono text-white/30">FEED-02 · ENCRYPTED</span>
+              </div>
+              {/* HUD bottom bar */}
+              <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between px-4 py-3 bg-gradient-to-t from-black/70 to-transparent">
+                <span className="text-[9px] font-mono text-[#2B59FF]/70 tracking-widest">WG · DEPLOYMENT · ACTIVE</span>
+                <div className="flex items-center gap-2">
+                  <div className="w-16 h-0.5 bg-[#2B59FF]/30 relative overflow-hidden">
+                    <div className="absolute inset-y-0 left-0 w-3/4 bg-[#2B59FF] animate-pulse" />
+                  </div>
+                  <span className="text-[9px] font-mono text-white/30">73%</span>
+                </div>
               </div>
             </div>
 
@@ -296,8 +334,8 @@ function App() {
               <div className="space-y-8">
                 {outcomes.map((outcome, i) => (
                   <div key={outcome} className="flex items-start gap-6 border-t border-white/[0.08] pt-8 reveal" style={{ transitionDelay: `${i * 80}ms` }}>
-                    <ShieldCheck className="mt-1 h-5 w-5 flex-none text-[#2B59FF]/60" />
-                    <p className="text-[17px] leading-relaxed text-white/60 font-light">{outcome}</p>
+                    <ShieldCheck className="mt-1 h-5 w-5 flex-none text-[#2B59FF]/70" />
+                    <p className="text-[17px] leading-relaxed text-white/65 font-light">{outcome}</p>
                   </div>
                 ))}
               </div>
@@ -305,31 +343,31 @@ function App() {
           </div>
         </section>
 
-        {/* ── METHODOLOGY ──────────────────────────────────────────────────── */}
-        <section id="services" className="bg-[#050505] px-[6vw] py-32 text-white border-t border-white/[0.06]">
+        {/* ── METHODOLOGY — light section (Palantir-style) ──────────────────── */}
+        <section id="services" className="bg-white px-[6vw] py-32 text-black border-t border-black/[0.06]">
           <div className="mb-24 flex flex-col justify-between gap-12 md:flex-row md:items-end">
             <div className="max-w-4xl">
               <p className="mb-6 text-[10px] font-mono tracking-[0.3em] uppercase text-[#2B59FF] reveal">Methodology</p>
-              <h2 className="text-display text-[clamp(36px,5vw,78px)] leading-[1] text-white reveal reveal-delay-1">
+              <h2 className="text-display text-[clamp(36px,5vw,78px)] leading-[1] text-black reveal reveal-delay-1">
                 Integrated engineering,<br />from audit to deployment.
               </h2>
             </div>
-            <BarChart3 className="h-16 w-16 text-white/[0.08] reveal" />
+            <BarChart3 className="h-16 w-16 text-black/[0.08] reveal" />
           </div>
 
-          <div className="grid gap-px bg-white/[0.06] lg:grid-cols-3 border border-white/[0.06]">
+          <div className="grid gap-px bg-black/[0.08] lg:grid-cols-3 border border-black/[0.08]">
             {['Assess', 'Build', 'Operate'].map((phase, index) => (
               <article
                 key={phase}
-                className="reveal bg-[#050505] p-12 transition-all duration-500 hover:bg-[#0a0a0a] hover:border-l-2 hover:border-l-[#2B59FF] group"
+                className="reveal bg-white p-12 transition-all duration-500 hover:bg-[#f9f9f7] hover:shadow-[inset_3px_0_0_#2B59FF] group"
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
                 <div className="mb-20 flex items-center justify-between">
-                  <span className="text-[10px] font-mono tracking-[0.2em] uppercase text-white/25">Phase 0{index + 1}</span>
+                  <span className="text-[10px] font-mono tracking-[0.2em] uppercase text-black/25">Phase 0{index + 1}</span>
                   <div className="h-0.5 w-8 bg-[#2B59FF] group-hover:w-16 transition-all duration-500" />
                 </div>
-                <h3 className="mb-6 text-[28px] font-medium leading-tight text-white">{phase}</h3>
-                <p className="text-[16px] leading-relaxed text-white/40 font-light">
+                <h3 className="mb-6 text-[28px] font-medium leading-tight text-black">{phase}</h3>
+                <p className="text-[16px] leading-relaxed text-black/50 font-light">
                   {index === 0 && 'We map the technical estate, identifying critical data gaps and high-value automation loops.'}
                   {index === 1 && 'Our team builds and integrates production-ready systems using secure, scalable cloud architecture.'}
                   {index === 2 && 'We provide the ongoing infrastructure and monitoring needed to scale decision intelligence.'}
@@ -339,12 +377,12 @@ function App() {
           </div>
         </section>
 
-        {/* ── PARTNERS ─────────────────────────────────────────────────────── */}
-        <section id="partners" className="bg-black py-24 text-white overflow-hidden border-t border-white/[0.06]">
+        {/* ── PARTNERS — off-white for rhythm ────────────────────────── */}
+        <section id="partners" className="bg-[#f4f4f0] py-24 overflow-hidden border-t border-black/[0.06]">
           <div className="mb-10 px-[6vw]">
-            <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-white/20 text-center reveal">Ecosystem Partners</p>
+            <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-black/30 text-center reveal">Ecosystem Partners</p>
           </div>
-          <div className="partner-marquee border-y border-white/[0.06] py-14" aria-label="Technology partners">
+          <div className="partner-marquee border-y border-black/[0.06] py-14" aria-label="Technology partners">
             <div className="partner-marquee__track">
               {[...partners, ...partners].map((partner, index) => (
                 <div
