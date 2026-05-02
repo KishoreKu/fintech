@@ -1,4 +1,4 @@
-import { ArrowUpRight, BarChart3, Bot, Braces, Database, LineChart, ShieldCheck } from 'lucide-react';
+import { ArrowUpRight, BarChart3, Bot, Cpu, Database, ShieldCheck, Satellite } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import './App.css';
 import Navigation from './sections/Navigation';
@@ -14,25 +14,45 @@ const partners = [
 ];
 
 const capabilities = [
-  { eyebrow: '01', title: 'AI operating systems', copy: 'Agents, workflows, and human review loops that move work from inboxes and spreadsheets into governed production systems.', icon: Bot },
-  { eyebrow: '02', title: 'Data and analytics', copy: 'Executive dashboards, forecasting models, attribution, and warehouse design for teams that need trusted answers fast.', icon: Database },
-  { eyebrow: '03', title: 'Product engineering', copy: 'Modern applications, integrations, and internal tools built around the real decisions your operators make every day.', icon: Braces },
-  { eyebrow: '04', title: 'Growth systems', copy: 'Campaign infrastructure, lifecycle automation, and measurement plans that connect marketing activity to revenue.', icon: LineChart },
+  {
+    eyebrow: '01',
+    title: 'Space domain intelligence',
+    copy: 'Satellite data pipelines, orbital analytics, and mission-critical situational awareness platforms built for the demands of modern space operations.',
+    icon: Satellite,
+  },
+  {
+    eyebrow: '02',
+    title: 'Autonomous AI systems',
+    copy: 'Self-directed agents, multi-modal decision loops, and autonomous orchestration that operate in unstructured environments without constant human oversight.',
+    icon: Bot,
+  },
+  {
+    eyebrow: '03',
+    title: 'Physical AI & robotics',
+    copy: 'Embodied intelligence stacks for ground, air, and orbital platforms — from real-time edge inference to kinematic control and sensor fusion.',
+    icon: Cpu,
+  },
+  {
+    eyebrow: '04',
+    title: 'Mission data platforms',
+    copy: 'Telemetry ingestion, sensor unification, and command-and-control dashboards that turn raw operational data into trusted, actionable intelligence.',
+    icon: Database,
+  },
 ];
 
 const outcomes = [
-  'Deploy AI automation across frontline workflows',
-  'Unify fragmented customer, finance, and operations data',
-  'Design decision interfaces for executives and operators',
-  'Launch secure cloud foundations with partner ecosystems',
+  'Deploy autonomous decision systems for ground and orbital operations',
+  'Unify satellite, sensor, and mission telemetry into governed pipelines',
+  'Build physical AI stacks for drones, robotics, and edge platforms',
+  'Design command-and-control interfaces for operators and mission commanders',
 ];
 
 const HEADLINE = 'Foundational software for the era of autonomy.';
 
 const statsData = [
-  { target: 42, suffix: '+', label: 'Workflows Deployed' },
-  { target: 8, suffix: '', label: 'Data Sources Unified' },
-  { target: 99, suffix: '.9%', label: 'Uptime SLA Target' },
+  { target: 12, suffix: '+', label: 'Space Programs Supported' },
+  { target: 40, suffix: '+', label: 'Autonomous Systems Deployed' },
+  { target: 99, suffix: '.9%', label: 'Mission Uptime SLA' },
   { target: 10, prefix: '<', suffix: 'wk', label: 'Avg. Delivery Time' },
 ];
 
@@ -148,8 +168,8 @@ function App() {
             }}
           />
 
-          {/* Technical Video BG — city infrastructure / aerial, full color */}
-          <div className="absolute inset-0 opacity-65">
+          {/* Space-domain video background — satellite / earth / orbital */}
+          <div className="absolute inset-0 opacity-70">
             <video
               className="hero-background-video"
               autoPlay
@@ -159,16 +179,16 @@ function App() {
               preload="auto"
               aria-hidden="true"
             >
-              {/* Primary: night city aerial / infrastructure */}
+              {/* Primary: Earth from space / orbital view */}
+              <source src="https://videos.pexels.com/video-files/2150327/2150327-uhd_2560_1440_30fps.mp4" type="video/mp4" />
+              {/* Fallback 1: Space / galaxy */}
+              <source src="https://videos.pexels.com/video-files/856426/856426-hd_1920_1080_25fps.mp4" type="video/mp4" />
+              {/* Fallback 2: Night city aerial (infrastructure) */}
               <source src="https://videos.pexels.com/video-files/3571264/3571264-uhd_2560_1440_30fps.mp4" type="video/mp4" />
-              {/* Fallback 1: city lights timelapse */}
-              <source src="https://videos.pexels.com/video-files/1849899/1849899-hd_1920_1080_24fps.mp4" type="video/mp4" />
-              {/* Fallback 2: general tech */}
-              <source src="https://videos.pexels.com/video-files/2278095/2278095-hd_1920_1080_25fps.mp4" type="video/mp4" />
             </video>
-            {/* Cinematic vignette + bottom fade — keeps text readable over colorful video */}
-            <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at center, transparent 20%, rgba(0,0,0,0.5) 100%)' }} />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent to-black" />
+            {/* Cinematic overlay — keeps headline legible */}
+            <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at center, transparent 20%, rgba(0,0,0,0.45) 100%)' }} />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-transparent to-black" />
           </div>
 
           <div className="relative flex min-h-screen flex-col justify-end px-[6vw] pb-[10vh] pt-32">
@@ -192,7 +212,7 @@ function App() {
               </div>
               <div className="max-w-xl border-l border-white/10 pl-8 pb-4 reveal reveal-delay-2">
                 <p className="text-[17px] leading-relaxed text-white/50 font-light">
-                  Westley Group engineering provides the technical edge for global enterprises navigating high-stakes operational complexity.
+                  Westley Group delivers the technical stack for enterprises operating in space, autonomous systems, and physical AI — where precision is mission-critical.
                 </p>
                 <div className="mt-10 flex flex-wrap gap-4">
                   <button
@@ -232,12 +252,12 @@ function App() {
             <div className="sticky top-32 h-fit">
               <p className="mb-6 text-[10px] font-mono tracking-[0.2em] uppercase font-bold text-[#2B59FF] reveal">Capabilities</p>
               <h2 className="text-display text-[clamp(34px,5vw,68px)] leading-[1] text-black reveal reveal-delay-1">
-                Engineered for<br />operational clarity.
+                Built for the hardest<br />operational domains.
               </h2>
               <div className="mt-12 space-y-4 reveal reveal-delay-2">
                 <div className="h-px w-24 bg-[#2B59FF]" />
                 <p className="text-[16px] text-black/50 leading-relaxed max-w-sm">
-                  We replace fragmented tools with unified systems that move data from spreadsheets into governed production.
+                  We engineer mission-critical AI systems for space operations, autonomous platforms, and physical AI deployments where failure is not an option.
                 </p>
               </div>
             </div>
@@ -291,12 +311,12 @@ function App() {
                   preload="metadata"
                   poster="/featured_work_main.jpg"
                 >
-                  {/* Primary: server room / data center */}
+                  {/* Primary: autonomous / robotics / drone operations */}
+                  <source src="https://videos.pexels.com/video-files/3827387/3827387-hd_1920_1080_25fps.mp4" type="video/mp4" />
+                  {/* Fallback 1: AI / tech control room */}
+                  <source src="https://videos.pexels.com/video-files/5698601/5698601-hd_1920_1080_30fps.mp4" type="video/mp4" />
+                  {/* Fallback 2: server / data operations */}
                   <source src="https://videos.pexels.com/video-files/3252912/3252912-hd_1920_1080_25fps.mp4" type="video/mp4" />
-                  {/* Fallback 1: tech/coding */}
-                  <source src="https://videos.pexels.com/video-files/5483077/5483077-hd_1920_1080_30fps.mp4" type="video/mp4" />
-                  {/* Fallback 2 */}
-                  <source src="https://videos.pexels.com/video-files/3129957/3129957-hd_1920_1080_25fps.mp4" type="video/mp4" />
                 </video>
                 {/* Blue tint overlay */}
                 <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(43,89,255,0.12) 0%, transparent 50%)', mixBlendMode: 'screen' }} />
@@ -309,13 +329,13 @@ function App() {
               <div className="absolute top-0 left-0 right-0 flex items-center justify-between px-4 py-3 bg-gradient-to-b from-black/70 to-transparent">
                 <div className="flex items-center gap-3">
                   <span className="h-1.5 w-1.5 bg-[#2B59FF] rounded-full animate-pulse" />
-                  <span className="text-[9px] font-mono tracking-widest text-white/60 uppercase">Live · Data Operations Center</span>
+                  <span className="text-[9px] font-mono tracking-widest text-white/60 uppercase">Live · Mission Operations Center</span>
                 </div>
-                <span className="text-[9px] font-mono text-white/30">FEED-02 · ENCRYPTED</span>
+                <span className="text-[9px] font-mono text-white/30">MISSION-01 · ENCRYPTED</span>
               </div>
               {/* HUD bottom bar */}
               <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between px-4 py-3 bg-gradient-to-t from-black/70 to-transparent">
-                <span className="text-[9px] font-mono text-[#2B59FF]/70 tracking-widest">WG · DEPLOYMENT · ACTIVE</span>
+                <span className="text-[9px] font-mono text-[#2B59FF]/70 tracking-widest">WG · AUTONOMOUS · ACTIVE</span>
                 <div className="flex items-center gap-2">
                   <div className="w-16 h-0.5 bg-[#2B59FF]/30 relative overflow-hidden">
                     <div className="absolute inset-y-0 left-0 w-3/4 bg-[#2B59FF] animate-pulse" />
@@ -326,7 +346,7 @@ function App() {
             </div>
 
             <div className="flex flex-col justify-center">
-              <p className="mb-6 text-[10px] font-mono tracking-[0.3em] uppercase text-[#2B59FF] reveal">Report: F-2410-X</p>
+              <p className="mb-6 text-[10px] font-mono tracking-[0.3em] uppercase text-[#2B59FF] reveal">Mission: ORBIT-2026-X</p>
               <h2 className="text-display text-[clamp(34px,5vw,72px)] leading-[1] mb-12 text-white reveal reveal-delay-1">
                 Accelerating decision<br />velocity at scale.
               </h2>
@@ -348,7 +368,7 @@ function App() {
             <div className="max-w-4xl">
               <p className="mb-6 text-[10px] font-mono tracking-[0.3em] uppercase text-[#2B59FF] reveal">Methodology</p>
               <h2 className="text-display text-[clamp(36px,5vw,78px)] leading-[1] text-black reveal reveal-delay-1">
-                Integrated engineering,<br />from audit to deployment.
+                Mission-grade engineering,<br />from concept to orbit.
               </h2>
             </div>
             <BarChart3 className="h-16 w-16 text-black/[0.08] reveal" />
@@ -367,26 +387,26 @@ function App() {
                 </div>
                 <h3 className="mb-6 text-[28px] font-medium leading-tight text-black">{phase}</h3>
                 <p className="text-[16px] leading-relaxed text-black/50 font-light">
-                  {index === 0 && 'We map the technical estate, identifying critical data gaps and high-value automation loops.'}
-                  {index === 1 && 'Our team builds and integrates production-ready systems using secure, scalable cloud architecture.'}
-                  {index === 2 && 'We provide the ongoing infrastructure and monitoring needed to scale decision intelligence.'}
+                  {index === 0 && 'We conduct deep technical assessments of your mission architecture, data flows, autonomy gaps, and edge-compute constraints.'}
+                  {index === 1 && 'Our engineering teams build and integrate production-ready autonomous systems, AI inference layers, and mission data platforms.'}
+                  {index === 2 && 'We deploy, monitor, and continuously improve your systems — from orbital telemetry ingestion to on-device physical AI updates.'}
                 </p>
               </article>
             ))}
           </div>
         </section>
 
-        {/* ── PARTNERS — dark background with clearly visible logos ───────── */}
-        <section id="partners" className="bg-[#0d0d0d] py-24 overflow-hidden border-t border-white/[0.06]">
+        {/* ── PARTNERS — white bg, full-color logos ─────────────────────── */}
+        <section id="partners" className="bg-white py-24 overflow-hidden border-t border-black/[0.06]">
           <div className="mb-10 px-[6vw]">
-            <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-white/30 text-center reveal">Ecosystem Partners</p>
+            <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-black/40 text-center reveal">Ecosystem Partners</p>
           </div>
-          <div className="partner-marquee border-y border-white/[0.06] py-14" aria-label="Technology partners">
+          <div className="partner-marquee border-y border-black/[0.08] py-14" aria-label="Technology partners">
             <div className="partner-marquee__track">
               {[...partners, ...partners].map((partner, index) => (
                 <div
                   key={`${partner.name}-${index}`}
-                  className="partner-marquee__item opacity-70 hover:opacity-100 transition-all duration-500"
+                  className="partner-marquee__item opacity-60 hover:opacity-100 transition-all duration-500"
                 >
                   <img
                     src={partner.logo}
