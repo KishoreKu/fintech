@@ -179,12 +179,8 @@ function App() {
               preload="auto"
               aria-hidden="true"
             >
-              {/* Space videos — verified Pexels IDs (orbital / satellite / earth sunrise) */}
-              <source src="https://videos.pexels.com/video-files/854275/854275-hd_1920_1080_25fps.mp4" type="video/mp4" />
-              <source src="https://videos.pexels.com/video-files/33497216/33497216-hd_1920_1080_25fps.mp4" type="video/mp4" />
-              <source src="https://videos.pexels.com/video-files/31084229/31084229-hd_1920_1080_25fps.mp4" type="video/mp4" />
-              <source src="https://videos.pexels.com/video-files/36061451/36061451-hd_1920_1080_25fps.mp4" type="video/mp4" />
-              <source src="https://videos.pexels.com/video-files/34333825/34333825-hd_1920_1080_25fps.mp4" type="video/mp4" />
+              {/* NASA public domain — ISS Earth + solar array timelapse (colorful, space) */}
+              <source src="/hero-space.webm" type="video/webm" />
             </video>
             {/* Cinematic overlay — keeps headline legible */}
             <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at center, transparent 20%, rgba(0,0,0,0.45) 100%)' }} />
@@ -311,10 +307,8 @@ function App() {
                   preload="metadata"
                   poster="/featured_work_main.jpg"
                 >
-                  {/* Robotics videos — verified Pexels IDs (industrial robot arms, factory, lab) */}
-                  <source src="https://videos.pexels.com/video-files/32386523/32386523-hd_1920_1080_25fps.mp4" type="video/mp4" />
-                  <source src="https://videos.pexels.com/video-files/32386518/32386518-hd_1920_1080_25fps.mp4" type="video/mp4" />
-                  <source src="https://videos.pexels.com/video-files/32386519/32386519-hd_1920_1080_25fps.mp4" type="video/mp4" />
+                  {/* NASA public domain — Ingenuity Mars helicopter autonomous flight (colorful, physical AI) */}
+                  <source src="/work-robotics.webm" type="video/webm" />
                 </video>
                 {/* Blue tint overlay */}
                 <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(43,89,255,0.12) 0%, transparent 50%)', mixBlendMode: 'screen' }} />
