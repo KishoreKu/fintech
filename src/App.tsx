@@ -187,7 +187,7 @@ function App() {
             <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-transparent to-black/80" />
           </div>
 
-          <div className="relative flex min-h-screen flex-col justify-end px-[6vw] pb-[10vh] pt-32">
+          <div className="relative z-10 flex min-h-screen flex-col justify-end px-[6vw] pb-[10vh] pt-32">
             {/* Status bar */}
             <div className="mb-12 flex flex-wrap items-center gap-6">
               <div className="flex items-center gap-2">
