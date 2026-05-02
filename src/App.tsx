@@ -363,23 +363,19 @@ function App() {
           </div>
         </section>
 
-        {/* ── PARTNERS — light gray bg, full-color logos ────────────────────── */}
-        <section id="partners" className="bg-[#eaecf2] py-24 overflow-hidden border-t border-black/[0.05]">
+        {/* ── PARTNERS — original style from e1a56ef ───────────────────────── */}
+        <section id="partners" className="bg-[#f4f2ea] py-16 text-[#111216]">
           <div className="mb-10 px-[6vw]">
-            <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-black/40 text-center reveal">Ecosystem Partners</p>
+            <p className="text-micro text-[#65676f]">Partner ecosystem</p>
           </div>
-          <div className="partner-marquee border-y border-black/[0.07] py-14" aria-label="Technology partners">
+          <div className="partner-marquee border-y border-[#c8c9c3]" aria-label="Technology partners">
             <div className="partner-marquee__track">
-              {[...partners, ...partners].map((partner, index) => (
-                <div
-                  key={`${partner.name}-${index}`}
-                  className="partner-marquee__item opacity-50 hover:opacity-100 transition-all duration-500"
-                >
+              {[...partners, ...partners, ...partners].map((partner, index) => (
+                <div key={`${partner.name}-${index}`} className="partner-marquee__item">
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className="partner-marquee__logo max-h-9"
-                    style={{ filter: 'brightness(0) invert(1)' }}
+                    className="partner-marquee__logo"
                     loading="lazy"
                   />
                 </div>
