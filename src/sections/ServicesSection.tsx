@@ -99,7 +99,7 @@ const ServicesSection = ({ className = '' }: ServicesSectionProps) => {
         <img
           src="/services_team.jpg"
           alt="Team meeting"
-          className="w-full h-full object-cover opacity-70"
+          className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
       </div>
@@ -119,7 +119,7 @@ const ServicesSection = ({ className = '' }: ServicesSectionProps) => {
         <img
           src="/services_portrait.jpg"
           alt="Team lead"
-          className="w-full h-full object-cover opacity-70"
+          className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
       </div>

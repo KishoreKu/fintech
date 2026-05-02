@@ -106,7 +106,7 @@ const FeaturedWorkSection = ({ className = '' }: FeaturedWorkSectionProps) => {
         <img
           src="/featured_work_main.jpg"
           alt="Featured work"
-          className="w-full h-full object-cover opacity-75"
+          className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
       </div>
@@ -146,7 +146,7 @@ const FeaturedWorkSection = ({ className = '' }: FeaturedWorkSectionProps) => {
         <img
           src="/featured_work_detail1.jpg"
           alt="Work detail"
-          className="w-full h-full object-cover opacity-75"
+          className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
       </div>

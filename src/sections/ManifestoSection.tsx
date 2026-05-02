@@ -115,7 +115,7 @@ const ManifestoSection = ({ className = '' }: ManifestoSectionProps) => {
           <img
             src="/manifesto_1.jpg"
             alt="Creative workspace"
-            className="w-full h-full object-cover opacity-70"
+            className="w-full h-full object-cover"
           />
         </div>
 
@@ -128,7 +128,7 @@ const ManifestoSection = ({ className = '' }: ManifestoSectionProps) => {
           <img
             src="/manifesto_2.jpg"
             alt="Team brainstorming"
-            className="w-full h-full object-cover opacity-70"
+            className="w-full h-full object-cover"
           />
         </div>
 
@@ -156,7 +156,7 @@ const ManifestoSection = ({ className = '' }: ManifestoSectionProps) => {
           <img
             src="/manifesto_3.jpg"
             alt="Developer coding"
-            className="w-full h-full object-cover opacity-70"
+            className="w-full h-full object-cover"
           />
         </div>
 
@@ -194,7 +194,7 @@ const ManifestoSection = ({ className = '' }: ManifestoSectionProps) => {
           <img
             src="/manifesto_4.jpg"
             alt="Team celebration"
-            className="w-full h-full object-cover opacity-70"
+            className="w-full h-full object-cover"
           />
         </div>
       </div>

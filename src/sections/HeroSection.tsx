@@ -121,7 +121,7 @@ const HeroSection = ({ className = '' }: HeroSectionProps) => {
         <img
           src="/hero_office.jpg"
           alt="Team collaboration"
-          className="w-full h-full object-cover opacity-75"
+          className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
       </div>
@@ -141,7 +141,7 @@ const HeroSection = ({ className = '' }: HeroSectionProps) => {
         <img
           src="/hero_portrait.jpg"
           alt="Creative professional"
-          className="w-full h-full object-cover opacity-75"
+          className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
       </div>

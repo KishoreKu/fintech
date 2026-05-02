@@ -149,7 +149,7 @@ function App() {
           />
 
           {/* Technical Video BG — city infrastructure / aerial, full color */}
-          <div className="absolute inset-0 opacity-55">
+          <div className="absolute inset-0 opacity-65">
             <video
               className="hero-background-video"
               autoPlay
@@ -386,7 +386,7 @@ function App() {
               {[...partners, ...partners].map((partner, index) => (
                 <div
                   key={`${partner.name}-${index}`}
-                  className="partner-marquee__item opacity-50 hover:opacity-100 transition-all duration-500 grayscale hover:grayscale-0 invert"
+                  className="partner-marquee__item opacity-70 hover:opacity-100 transition-all duration-500"
                 >
                   <img
                     src={partner.logo}
