@@ -22,7 +22,7 @@ const Navigation = () => {
       setIsScrolled(scrollY > 48);
       // Detect if we're in the dark hero section (first 100vh) or a light section
       const vh = window.innerHeight;
-      const lightSections = ['platform', 'services', 'partners'];
+      const lightSections = ['platform', 'services'];
       let overLight = false;
       for (const id of lightSections) {
         const el = document.getElementById(id);

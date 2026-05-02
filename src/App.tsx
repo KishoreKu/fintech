@@ -148,8 +148,8 @@ function App() {
             }}
           />
 
-          {/* Technical Video BG — city infrastructure / aerial */}
-          <div className="absolute inset-0 opacity-45">
+          {/* Technical Video BG — city infrastructure / aerial, full color */}
+          <div className="absolute inset-0 opacity-55">
             <video
               className="hero-background-video"
               autoPlay
@@ -158,7 +158,6 @@ function App() {
               playsInline
               preload="auto"
               aria-hidden="true"
-              style={{ filter: 'saturate(0.3) brightness(0.55)' }}
             >
               {/* Primary: night city aerial / infrastructure */}
               <source src="https://videos.pexels.com/video-files/3571264/3571264-uhd_2560_1440_30fps.mp4" type="video/mp4" />
@@ -167,9 +166,9 @@ function App() {
               {/* Fallback 2: general tech */}
               <source src="https://videos.pexels.com/video-files/2278095/2278095-hd_1920_1080_25fps.mp4" type="video/mp4" />
             </video>
-            {/* Cinematic vignette + bottom fade */}
-            <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.6) 100%)' }} />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black" />
+            {/* Cinematic vignette + bottom fade — keeps text readable over colorful video */}
+            <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at center, transparent 20%, rgba(0,0,0,0.5) 100%)' }} />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent to-black" />
           </div>
 
           <div className="relative flex min-h-screen flex-col justify-end px-[6vw] pb-[10vh] pt-32">
@@ -377,17 +376,17 @@ function App() {
           </div>
         </section>
 
-        {/* ── PARTNERS — off-white for rhythm ────────────────────────── */}
-        <section id="partners" className="bg-[#f4f4f0] py-24 overflow-hidden border-t border-black/[0.06]">
+        {/* ── PARTNERS — dark background with clearly visible logos ───────── */}
+        <section id="partners" className="bg-[#0d0d0d] py-24 overflow-hidden border-t border-white/[0.06]">
           <div className="mb-10 px-[6vw]">
-            <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-black/30 text-center reveal">Ecosystem Partners</p>
+            <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-white/30 text-center reveal">Ecosystem Partners</p>
           </div>
-          <div className="partner-marquee border-y border-black/[0.06] py-14" aria-label="Technology partners">
+          <div className="partner-marquee border-y border-white/[0.06] py-14" aria-label="Technology partners">
             <div className="partner-marquee__track">
               {[...partners, ...partners].map((partner, index) => (
                 <div
                   key={`${partner.name}-${index}`}
-                  className="partner-marquee__item grayscale invert opacity-25 hover:opacity-70 hover:grayscale-0 hover:invert-0 transition-all duration-500"
+                  className="partner-marquee__item opacity-50 hover:opacity-100 transition-all duration-500 grayscale hover:grayscale-0 invert"
                 >
                   <img
                     src={partner.logo}
