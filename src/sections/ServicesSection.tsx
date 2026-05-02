@@ -73,7 +73,7 @@ const ServicesSection = ({ className = '' }: ServicesSectionProps) => {
     <section
       ref={sectionRef}
       id="services-pinned"
-      className={`pinned-section bg-[#050505] ${className}`}
+      className={`pinned-section bg-[#0d1117] ${className}`}
     >
       {/* Subtle grid overlay */}
       <div

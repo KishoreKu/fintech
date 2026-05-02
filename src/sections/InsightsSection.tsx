@@ -96,7 +96,7 @@ const InsightsSection = ({ className = '' }: InsightsSectionProps) => {
     <section
       ref={sectionRef}
       id="insights"
-      className={`flowing-section bg-[#050505] ${className}`}
+      className={`flowing-section bg-[#0d1117] ${className}`}
       style={{ paddingTop: '12vh', paddingBottom: '12vh' }}
     >
       {/* Header Row */}

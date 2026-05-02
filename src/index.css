@@ -27,18 +27,20 @@
     --ring: 227 100% 58%;
     --radius: 0rem;
 
-    --bg-black: #000000;
-    --bg-surface: #0a0a0a;
-    --bg-surface-2: #0d0d0d;
-    --border-dark: rgba(255, 255, 255, 0.08);
+    --bg-black: #0d1117;
+    --bg-surface: #111827;
+    --bg-surface-2: #1a2035;
+    --bg-light: #f0f2f5;
+    --bg-light-2: #f5f6f8;
+    --border-dark: rgba(255, 255, 255, 0.07);
     --border-blue: rgba(43, 89, 255, 0.3);
     --accent-action: #2B59FF;
     --text-primary: #ffffff;
-    --text-secondary: rgba(255, 255, 255, 0.55);
-    --text-muted: rgba(255, 255, 255, 0.25);
-    --glow-blue: 0 0 60px rgba(43, 89, 255, 0.3);
-    --glow-blue-sm: 0 0 20px rgba(43, 89, 255, 0.2);
-    --surface-glass: rgba(10, 10, 10, 0.9);
+    --text-secondary: rgba(255, 255, 255, 0.6);
+    --text-muted: rgba(255, 255, 255, 0.3);
+    --glow-blue: 0 0 60px rgba(43, 89, 255, 0.25);
+    --glow-blue-sm: 0 0 20px rgba(43, 89, 255, 0.15);
+    --surface-glass: rgba(13, 17, 23, 0.92);
   }
 }
 
@@ -53,7 +55,7 @@
 
   body {
     font-family: 'Inter', sans-serif;
-    background-color: #000000;
+    background-color: #0d1117;
     color: #ffffff;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;

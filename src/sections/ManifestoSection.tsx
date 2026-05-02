@@ -89,7 +89,7 @@ const ManifestoSection = ({ className = '' }: ManifestoSectionProps) => {
     <section
       ref={sectionRef}
       id="manifesto"
-      className={`pinned-section bg-[#050505] ${className}`}
+      className={`pinned-section bg-[#0d1117] ${className}`}
     >
       {/* Grid Container */}
       <div

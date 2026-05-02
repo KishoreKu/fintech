@@ -116,7 +116,7 @@ function useCountUp(target: number, duration = 1800) {
 function StatCounter({ target, prefix = '', suffix = '', label }: { target: number; prefix?: string; suffix?: string; label: string }) {
   const { value, ref } = useCountUp(target);
   return (
-    <div ref={ref} className="bg-black px-8 py-8 border-r border-white/[0.08] last:border-r-0">
+    <div ref={ref} className="bg-[#111827] px-8 py-8 border-r border-white/[0.06] last:border-r-0">
       <p className="text-[clamp(28px,3.5vw,52px)] font-bold text-white tabular-nums leading-none">
         {prefix}{value}{suffix}
       </p>
@@ -149,13 +149,13 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-black text-white font-inter">
+    <div className="min-h-screen bg-[#0d1117] text-white font-inter">
       <div className="grain-overlay" />
       <Navigation />
 
       <main>
         {/* ── HERO ─────────────────────────────────────────────────────────── */}
-        <section id="home" className="relative min-h-screen overflow-hidden bg-black text-white">
+        <section id="home" className="relative min-h-screen overflow-hidden bg-[#0d1117] text-white">
           {/* Radial glow */}
           <div className="hero-glow" />
 
@@ -243,7 +243,7 @@ function App() {
         </section>
 
         {/* ── CAPABILITIES — light section (Palantir-style) ─────────────────── */}
-        <section id="platform" className="bg-[#f9f9f7] px-[6vw] py-32 text-black border-t border-black/[0.06]">
+        <section id="platform" className="bg-[#f0f2f5] px-[6vw] py-32 text-black border-t border-black/[0.05]">
           <div className="grid gap-16 lg:grid-cols-[0.7fr_1.3fr]">
             <div className="sticky top-32 h-fit">
               <p className="mb-6 text-[10px] font-mono tracking-[0.2em] uppercase font-bold text-[#2B59FF] reveal">Capabilities</p>
@@ -258,11 +258,11 @@ function App() {
               </div>
             </div>
 
-            <div className="grid gap-px bg-black/[0.08] md:grid-cols-2 border border-black/[0.08]">
+            <div className="grid gap-px bg-black/[0.06] md:grid-cols-2 border border-black/[0.06]">
               {capabilities.map((cap, i) => (
                 <article
                   key={cap.title}
-                  className="reveal bg-[#f9f9f7] p-10 transition-all duration-500 hover:bg-white hover:shadow-[0_8px_40px_rgba(0,0,0,0.08)] border border-transparent hover:border-[#2B59FF]/20"
+                  className="reveal bg-[#f0f2f5] p-10 transition-all duration-500 hover:bg-white hover:shadow-[0_8px_40px_rgba(0,0,0,0.06)] border border-transparent hover:border-[#2B59FF]/20"
                   style={{ transitionDelay: `${i * 80}ms` }}
                 >
                   <div className="mb-16 flex items-center justify-between">
@@ -330,7 +330,7 @@ function App() {
         </section>
 
         {/* ── METHODOLOGY — light section (Palantir-style) ──────────────────── */}
-        <section id="services" className="bg-white px-[6vw] py-32 text-black border-t border-black/[0.06]">
+        <section id="services" className="bg-[#f0f2f5] px-[6vw] py-32 text-black border-t border-black/[0.05]">
           <div className="mb-24 flex flex-col justify-between gap-12 md:flex-row md:items-end">
             <div className="max-w-4xl">
               <p className="mb-6 text-[10px] font-mono tracking-[0.3em] uppercase text-[#2B59FF] reveal">Methodology</p>
@@ -341,11 +341,11 @@ function App() {
             <BarChart3 className="h-16 w-16 text-black/[0.08] reveal" />
           </div>
 
-          <div className="grid gap-px bg-black/[0.08] lg:grid-cols-3 border border-black/[0.08]">
+          <div className="grid gap-px bg-black/[0.06] lg:grid-cols-3 border border-black/[0.06]">
             {['Assess', 'Build', 'Operate'].map((phase, index) => (
               <article
                 key={phase}
-                className="reveal bg-white p-12 transition-all duration-500 hover:bg-[#f9f9f7] hover:shadow-[inset_3px_0_0_#2B59FF] group"
+                className="reveal bg-[#f0f2f5] p-12 transition-all duration-500 hover:bg-white hover:shadow-[inset_3px_0_0_#2B59FF] group"
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
                 <div className="mb-20 flex items-center justify-between">
@@ -364,7 +364,7 @@ function App() {
         </section>
 
         {/* ── PARTNERS — white bg, full-color logos ─────────────────────── */}
-        <section id="partners" className="bg-white py-24 overflow-hidden border-t border-black/[0.06]">
+        <section id="partners" className="bg-[#f5f6f8] py-24 overflow-hidden border-t border-black/[0.05]">
           <div className="mb-10 px-[6vw]">
             <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-black/40 text-center reveal">Ecosystem Partners</p>
           </div>
@@ -388,7 +388,7 @@ function App() {
         </section>
 
         {/* ── CONTACT ──────────────────────────────────────────────────────── */}
-        <section id="contact" className="bg-black px-[6vw] py-32 border-t border-white/[0.06] text-white">
+        <section id="contact" className="bg-[#0d1117] px-[6vw] py-32 border-t border-white/[0.06] text-white">
           <div className="grid gap-20 lg:grid-cols-[1fr_0.8fr]">
             <div>
               <p className="mb-6 text-[10px] font-mono tracking-[0.3em] uppercase text-[#2B59FF] reveal flex items-center gap-2">

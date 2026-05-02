@@ -77,7 +77,7 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
     <section
       ref={sectionRef}
       id="contact"
-      className={`flowing-section bg-[#0B0C0F] ${className}`}
+      className={`flowing-section bg-[#0d1117] ${className}`}
       style={{ paddingTop: '12vh', paddingBottom: '8vh' }}
     >
       {/* Contact Block */}
@@ -88,7 +88,7 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
         {/* Left Large Card - Start a Project */}
         <div
           ref={card1Ref}
-          className="card-rounded card-border bg-[#111216] will-change-transform md:col-span-2 flex flex-col justify-between"
+          className="card-rounded card-border bg-[#111827] will-change-transform md:col-span-2 flex flex-col justify-between"
           style={{
             padding: '5vh 4vw',
             minHeight: '32vh',
@@ -118,7 +118,7 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
           {/* Address Card */}
           <div
             ref={card2Ref}
-            className="card-rounded card-border bg-[#111216] will-change-transform flex-1"
+            className="card-rounded card-border bg-[#111827] will-change-transform flex-1"
             style={{
               padding: '3vh 2.5vw',
               borderColor: 'rgba(255,255,255,0.08)',
@@ -150,7 +150,7 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
           {/* Social Card */}
           <div
             ref={card3Ref}
-            className="card-rounded card-border bg-[#111216] will-change-transform flex-1"
+            className="card-rounded card-border bg-[#111827] will-change-transform flex-1"
             style={{
               padding: '3vh 2.5vw',
               borderColor: 'rgba(255,255,255,0.08)',

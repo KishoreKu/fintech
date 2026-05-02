@@ -114,7 +114,7 @@ const ProcessSection = ({ className = '' }: ProcessSectionProps) => {
     <section
       ref={sectionRef}
       id="process"
-      className={`flowing-section bg-[#050505] ${className}`}
+      className={`flowing-section bg-[#0d1117] ${className}`}
       style={{ paddingTop: '12vh', paddingBottom: '12vh' }}
     >
       {/* Heading Block */}
