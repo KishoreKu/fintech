@@ -47,7 +47,7 @@ const outcomes = [
   'Design command-and-control interfaces for operators and mission commanders',
 ];
 
-const HEADLINE = 'Foundational software for the era of autonomy.';
+const HEADLINE = 'Where software meets the speed of orbit.';
 
 const statsData = [
   { target: 12, suffix: '+', label: 'Space Programs Supported' },
@@ -192,10 +192,10 @@ function App() {
             <div className="mb-12 flex flex-wrap items-center gap-6">
               <div className="flex items-center gap-2">
                 <div className="h-1.5 w-1.5 rounded-full bg-[#2B59FF] animate-pulse" />
-                <span className="text-[10px] font-mono tracking-[0.2em] uppercase text-white/40">System Live</span>
+                <span className="text-[10px] font-mono tracking-[0.2em] uppercase text-white/40">Mission Active</span>
               </div>
               <span className="h-px w-12 bg-white/10" />
-              <span className="text-[10px] font-mono tracking-[0.2em] uppercase text-white/40">Ref: WG-2026-ALPHA</span>
+              <span className="text-[10px] font-mono tracking-[0.2em] uppercase text-white/40">Ref: WG-ORBIT-01</span>
             </div>
 
             {/* Headline + sub */}
@@ -207,8 +207,8 @@ function App() {
                 </h1>
               </div>
               <div className="max-w-xl border-l border-white/10 pl-8 pb-4 reveal reveal-delay-2">
-                <p className="text-[17px] leading-relaxed text-white/50 font-light">
-                  Westley Group delivers the technical stack for enterprises operating in space, autonomous systems, and physical AI — where precision is mission-critical.
+                <p className="text-[17px] leading-relaxed text-white/70 font-light">
+                  Westley Group builds the software infrastructure for enterprises operating in space, autonomous systems, and physical AI — engineered for environments where failure is not an option.
                 </p>
                 <div className="mt-10 flex flex-wrap gap-4">
                   <button
@@ -232,11 +232,11 @@ function App() {
             {/* HUD Bottom */}
             <div className="mt-8 flex items-center justify-between border-t border-white/[0.06] pt-6 text-[9px] font-mono tracking-widest text-white/20 uppercase">
               <div className="flex gap-12">
-                <span>Lat: 40.7128° N</span>
-                <span>Lon: 74.0060° W</span>
+                <span>Lat: 28.5721° N</span>
+                <span>Lon: 80.6480° W</span>
               </div>
               <div className="hidden md:block">
-                <span>Encryption: AES-256-GCM</span>
+                <span>Launch Site: KSC · SLC-39A</span>
               </div>
             </div>
           </div>
