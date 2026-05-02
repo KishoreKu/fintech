@@ -88,9 +88,9 @@ const CaseStudySection = ({ className = '' }: CaseStudySectionProps) => {
         <img
           src="/case_study_fitness.jpg"
           alt="Fitness app case study"
-          className="w-full h-full object-cover opacity-80"
+          className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent" />
       </div>
 
       {/* Right Top — Title (Dark Blue) */}

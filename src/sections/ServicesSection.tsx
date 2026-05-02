@@ -101,7 +101,7 @@ const ServicesSection = ({ className = '' }: ServicesSectionProps) => {
           alt="Team meeting"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
       </div>
 
       {/* Card 4 — Portrait */}
@@ -121,7 +121,7 @@ const ServicesSection = ({ className = '' }: ServicesSectionProps) => {
           alt="Team lead"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
       </div>
 
       {/* Card 2 — Title Block (Dark Blue) */}

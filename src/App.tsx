@@ -168,8 +168,8 @@ function App() {
             }}
           />
 
-          {/* Space-domain video background — satellite / earth / orbital */}
-          <div className="absolute inset-0 opacity-70">
+          {/* Space-domain video background */}
+          <div className="absolute inset-0">
             <video
               className="hero-background-video"
               autoPlay
@@ -179,12 +179,12 @@ function App() {
               preload="auto"
               aria-hidden="true"
             >
-              {/* NASA public domain — ISS Earth + solar array timelapse (colorful, space) */}
+              {/* NASA public domain — ISS Earth + solar array timelapse */}
               <source src="/hero-space.webm" type="video/webm" />
             </video>
             {/* Cinematic overlay — keeps headline legible */}
-            <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at center, transparent 20%, rgba(0,0,0,0.45) 100%)' }} />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-transparent to-black" />
+            <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.3) 100%)' }} />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-transparent to-black/80" />
           </div>
 
           <div className="relative flex min-h-screen flex-col justify-end px-[6vw] pb-[10vh] pt-32">
@@ -363,12 +363,12 @@ function App() {
           </div>
         </section>
 
-        {/* ── PARTNERS — dark bg, white logos ──────────────────────────────── */}
-        <section id="partners" className="bg-[#111827] py-24 overflow-hidden border-t border-white/[0.06]">
+        {/* ── PARTNERS — light gray bg, full-color logos ────────────────────── */}
+        <section id="partners" className="bg-[#eaecf2] py-24 overflow-hidden border-t border-black/[0.05]">
           <div className="mb-10 px-[6vw]">
-            <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-white/30 text-center reveal">Ecosystem Partners</p>
+            <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-black/40 text-center reveal">Ecosystem Partners</p>
           </div>
-          <div className="partner-marquee border-y border-white/[0.07] py-14" aria-label="Technology partners">
+          <div className="partner-marquee border-y border-black/[0.07] py-14" aria-label="Technology partners">
             <div className="partner-marquee__track">
               {[...partners, ...partners].map((partner, index) => (
                 <div

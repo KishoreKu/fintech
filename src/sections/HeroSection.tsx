@@ -123,7 +123,7 @@ const HeroSection = ({ className = '' }: HeroSectionProps) => {
           alt="Team collaboration"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
       </div>
 
       {/* Card D - Small Portrait */}
@@ -143,7 +143,7 @@ const HeroSection = ({ className = '' }: HeroSectionProps) => {
           alt="Creative professional"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
       </div>
 
       {/* Card B - Headline (Dark Blue Accent) */}

@@ -108,7 +108,7 @@ const FeaturedWorkSection = ({ className = '' }: FeaturedWorkSectionProps) => {
           alt="Featured work"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
       </div>
 
       {/* Card B - Top Right Title (Dark Blue Accent) */}
@@ -148,7 +148,7 @@ const FeaturedWorkSection = ({ className = '' }: FeaturedWorkSectionProps) => {
           alt="Work detail"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
       </div>
 
       {/* Card D - Bottom Left Title (Dark Blue Accent) */}
