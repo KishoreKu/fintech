@@ -363,22 +363,23 @@ function App() {
           </div>
         </section>
 
-        {/* ── PARTNERS — white bg, full-color logos ─────────────────────── */}
-        <section id="partners" className="bg-[#f5f6f8] py-24 overflow-hidden border-t border-black/[0.05]">
+        {/* ── PARTNERS — dark bg, white logos ──────────────────────────────── */}
+        <section id="partners" className="bg-[#111827] py-24 overflow-hidden border-t border-white/[0.06]">
           <div className="mb-10 px-[6vw]">
-            <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-black/40 text-center reveal">Ecosystem Partners</p>
+            <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-white/30 text-center reveal">Ecosystem Partners</p>
           </div>
-          <div className="partner-marquee border-y border-black/[0.08] py-14" aria-label="Technology partners">
+          <div className="partner-marquee border-y border-white/[0.07] py-14" aria-label="Technology partners">
             <div className="partner-marquee__track">
               {[...partners, ...partners].map((partner, index) => (
                 <div
                   key={`${partner.name}-${index}`}
-                  className="partner-marquee__item opacity-60 hover:opacity-100 transition-all duration-500"
+                  className="partner-marquee__item opacity-50 hover:opacity-100 transition-all duration-500"
                 >
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className="partner-marquee__logo max-h-10"
+                    className="partner-marquee__logo max-h-9"
+                    style={{ filter: 'brightness(0) invert(1)' }}
                     loading="lazy"
                   />
                 </div>
