@@ -168,20 +168,29 @@ function App() {
             }}
           />
 
-          {/* Space-domain video background */}
+          {/* Rotating domain video background */}
           <div className="absolute inset-0">
-            <video
-              className="hero-background-video"
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="auto"
-              aria-hidden="true"
-            >
-              {/* NASA public domain — ISS Earth + solar array timelapse */}
-              <source src="/hero-space.webm" type="video/webm" />
-            </video>
+            {heroVideos.map((video, index) => (
+              <div
+                key={video.src}
+                className={`absolute inset-0 transition-opacity duration-1000 ${
+                  index === activeVideoIndex ? 'opacity-100' : 'opacity-0'
+                }`}
+              >
+                <video
+                  ref={(el) => (videoRefs.current[index] = el)}
+                  className="hero-background-video"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="auto"
+                  aria-hidden="true"
+                >
+                  <source src={video.src} type="video/mp4" />
+                </video>
+              </div>
+            ))}
             {/* Cinematic overlay — keeps headline legible */}
             <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.3) 100%)' }} />
             <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-transparent to-black/80" />
@@ -193,6 +202,13 @@ function App() {
               <div className="flex items-center gap-2">
                 <div className="h-1.5 w-1.5 rounded-full bg-[#2B59FF] animate-pulse" />
                 <span className="text-[10px] font-mono tracking-[0.2em] uppercase text-white/40">Mission Active</span>
+              </div>
+              <span className="h-px w-12 bg-white/10" />
+              <div className="flex items-center gap-2">
+                <span className="text-[10px] font-mono tracking-[0.2em] uppercase text-white/40">Domain:</span>
+                <span className="text-[10px] font-mono tracking-[0.2em] uppercase text-[#2B59FF] font-bold transition-all duration-500">
+                  {heroVideos[activeVideoIndex].domain}
+                </span>
               </div>
               <span className="h-px w-12 bg-white/10" />
               <span className="text-[10px] font-mono tracking-[0.2em] uppercase text-white/40">Ref: WG-ORBIT-01</span>
