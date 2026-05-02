@@ -310,23 +310,31 @@ function App() {
           </div>
         </section>
 
-        {/* ── WORK — full-width cinematic space/autonomy video ─────────────── */}
+        {/* ── WORK — full-width cinematic rotating videos ──────────────────── */}
         <section id="work" className="relative text-white overflow-hidden border-t border-white/[0.06]" style={{ minHeight: '85vh' }}>
-          {/* Full-bleed background video */}
-          <video
-            className="absolute inset-0 w-full h-full object-cover"
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="auto"
-            aria-hidden="true"
-          >
-            {/* NASA SLS Rocket Engine Fire — four RS-25 engines, massive orange flames */}
-            <source src="/work-robotics.webm" type="video/webm" />
-            {/* Fallback: SpaceX Starship Flight 5 Booster Catch */}
-            <source src="/work-robotics2.webm" type="video/webm" />
-          </video>
+          {/* Full-bleed background videos */}
+          <div className="absolute inset-0">
+            {workVideos.map((video, index) => (
+              <div
+                key={video.src}
+                className={`absolute inset-0 transition-opacity duration-1000 ${
+                  index === activeWorkIndex ? 'opacity-100' : 'opacity-0'
+                }`}
+              >
+                <video
+                  className="absolute inset-0 w-full h-full object-cover"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="auto"
+                  aria-hidden="true"
+                >
+                  <source src={video.src} type="video/mp4" />
+                </video>
+              </div>
+            ))}
+          </div>
 
           {/* Gradient overlays — keep bottom text readable, let top video breathe */}
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
@@ -335,7 +343,9 @@ function App() {
           {/* Top badge */}
           <div className="absolute top-8 left-[6vw] flex items-center gap-3 z-10">
             <span className="h-2 w-2 bg-[#2B59FF] rounded-full animate-pulse" />
-            <span className="text-[9px] font-mono tracking-[0.25em] uppercase text-white/60">NASA · SLS Engine Test Fire · 322,000 lbs of Thrust · Space Launch System</span>
+            <span className="text-[9px] font-mono tracking-[0.25em] uppercase text-white/60 transition-all duration-500">
+              {workVideos[activeWorkIndex].badge}
+            </span>
           </div>
 
           {/* Bottom content panel */}
@@ -343,9 +353,11 @@ function App() {
             <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:items-end max-w-[1400px]">
 
               <div>
-                <p className="mb-5 text-[10px] font-mono tracking-[0.3em] uppercase text-[#2B59FF] reveal">Mission: ORBIT-2026-X</p>
-                <h2 className="text-display text-[clamp(30px,4.5vw,68px)] leading-[1] mb-10 text-white reveal reveal-delay-1">
-                  Propulsion systems<br />at the frontier<br />of human exploration.
+                <p className="mb-5 text-[10px] font-mono tracking-[0.3em] uppercase text-[#2B59FF] reveal transition-all duration-500">
+                  Mission: {workVideos[activeWorkIndex].mission}
+                </p>
+                <h2 className="text-display text-[clamp(30px,4.5vw,68px)] leading-[1] mb-10 text-white reveal reveal-delay-1 transition-all duration-500 h-[2.2em]">
+                  {workVideos[activeWorkIndex].headline}
                 </h2>
               </div>
 
