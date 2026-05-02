@@ -242,35 +242,35 @@ function App() {
           </div>
         </section>
 
-        {/* ── CAPABILITIES — light section (Palantir-style) ─────────────────── */}
-        <section id="platform" className="bg-[#f0f2f5] px-[6vw] py-32 text-black border-t border-black/[0.05]">
+        {/* ── CAPABILITIES — light dark theme ─────────────────────────────── */}
+        <section id="platform" className="bg-[#111827] px-[6vw] py-32 text-white border-t border-white/[0.05]">
           <div className="grid gap-16 lg:grid-cols-[0.7fr_1.3fr]">
             <div className="sticky top-32 h-fit">
               <p className="mb-6 text-[10px] font-mono tracking-[0.2em] uppercase font-bold text-[#2B59FF] reveal">Capabilities</p>
-              <h2 className="text-display text-[clamp(34px,5vw,68px)] leading-[1] text-black reveal reveal-delay-1">
+              <h2 className="text-display text-[clamp(34px,5vw,68px)] leading-[1] text-white reveal reveal-delay-1">
                 Built for the hardest<br />operational domains.
               </h2>
               <div className="mt-12 space-y-4 reveal reveal-delay-2">
                 <div className="h-px w-24 bg-[#2B59FF]" />
-                <p className="text-[16px] text-black/50 leading-relaxed max-w-sm">
+                <p className="text-[16px] text-white/60 leading-relaxed max-w-sm">
                   We engineer mission-critical AI systems for space operations, autonomous platforms, and physical AI deployments where failure is not an option.
                 </p>
               </div>
             </div>
 
-            <div className="grid gap-px bg-black/[0.06] md:grid-cols-2 border border-black/[0.06]">
+            <div className="grid gap-px bg-white/[0.06] md:grid-cols-2 border border-white/[0.06]">
               {capabilities.map((cap, i) => (
                 <article
                   key={cap.title}
-                  className="reveal bg-[#f0f2f5] p-10 transition-all duration-500 hover:bg-white hover:shadow-[0_8px_40px_rgba(0,0,0,0.06)] border border-transparent hover:border-[#2B59FF]/20"
+                  className="reveal bg-[#111827] p-10 transition-all duration-500 hover:bg-[#1f2937] hover:shadow-[0_8px_40px_rgba(0,0,0,0.2)] border border-transparent hover:border-[#2B59FF]/30"
                   style={{ transitionDelay: `${i * 80}ms` }}
                 >
                   <div className="mb-16 flex items-center justify-between">
-                    <span className="text-[10px] font-mono tracking-[0.2em] uppercase font-bold text-black/25">{cap.eyebrow}</span>
-                    <cap.icon className="h-6 w-6 text-[#2B59FF]/70" />
+                    <span className="text-[10px] font-mono tracking-[0.2em] uppercase font-bold text-white/30">{cap.eyebrow}</span>
+                    <cap.icon className="h-6 w-6 text-[#2B59FF]/80" />
                   </div>
-                  <h3 className="mb-6 text-[26px] font-medium leading-tight text-black">{cap.title}</h3>
-                  <p className="text-[15px] leading-relaxed text-black/55">{cap.copy}</p>
+                  <h3 className="mb-6 text-[26px] font-medium leading-tight text-white">{cap.title}</h3>
+                  <p className="text-[15px] leading-relaxed text-white/60">{cap.copy}</p>
                   <div className="mt-12 h-px w-8 bg-[#2B59FF]/40" />
                 </article>
               ))}
@@ -329,31 +329,31 @@ function App() {
           </div>
         </section>
 
-        {/* ── METHODOLOGY — light section (Palantir-style) ──────────────────── */}
-        <section id="services" className="bg-[#f0f2f5] px-[6vw] py-32 text-black border-t border-black/[0.05]">
+        {/* ── METHODOLOGY — light dark theme ──────────────────────────────── */}
+        <section id="services" className="bg-[#111827] px-[6vw] py-32 text-white border-t border-white/[0.05]">
           <div className="mb-24 flex flex-col justify-between gap-12 md:flex-row md:items-end">
             <div className="max-w-4xl">
               <p className="mb-6 text-[10px] font-mono tracking-[0.3em] uppercase text-[#2B59FF] reveal">Methodology</p>
-              <h2 className="text-display text-[clamp(36px,5vw,78px)] leading-[1] text-black reveal reveal-delay-1">
+              <h2 className="text-display text-[clamp(36px,5vw,78px)] leading-[1] text-white reveal reveal-delay-1">
                 Mission-grade engineering,<br />from concept to orbit.
               </h2>
             </div>
-            <BarChart3 className="h-16 w-16 text-black/[0.08] reveal" />
+            <BarChart3 className="h-16 w-16 text-white/[0.08] reveal" />
           </div>
 
-          <div className="grid gap-px bg-black/[0.06] lg:grid-cols-3 border border-black/[0.06]">
+          <div className="grid gap-px bg-white/[0.06] lg:grid-cols-3 border border-white/[0.06]">
             {['Assess', 'Build', 'Operate'].map((phase, index) => (
               <article
                 key={phase}
-                className="reveal bg-[#f0f2f5] p-12 transition-all duration-500 hover:bg-white hover:shadow-[inset_3px_0_0_#2B59FF] group"
+                className="reveal bg-[#111827] p-12 transition-all duration-500 hover:bg-[#1f2937] hover:shadow-[inset_3px_0_0_#2B59FF] group"
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
                 <div className="mb-20 flex items-center justify-between">
-                  <span className="text-[10px] font-mono tracking-[0.2em] uppercase text-black/25">Phase 0{index + 1}</span>
+                  <span className="text-[10px] font-mono tracking-[0.2em] uppercase text-white/30">Phase 0{index + 1}</span>
                   <div className="h-0.5 w-8 bg-[#2B59FF] group-hover:w-16 transition-all duration-500" />
                 </div>
-                <h3 className="mb-6 text-[28px] font-medium leading-tight text-black">{phase}</h3>
-                <p className="text-[16px] leading-relaxed text-black/50 font-light">
+                <h3 className="mb-6 text-[28px] font-medium leading-tight text-white">{phase}</h3>
+                <p className="text-[16px] leading-relaxed text-white/60 font-light">
                   {index === 0 && 'We conduct deep technical assessments of your mission architecture, data flows, autonomy gaps, and edge-compute constraints.'}
                   {index === 1 && 'Our engineering teams build and integrate production-ready autonomous systems, AI inference layers, and mission data platforms.'}
                   {index === 2 && 'We deploy, monitor, and continuously improve your systems — from orbital telemetry ingestion to on-device physical AI updates.'}
