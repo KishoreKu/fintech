@@ -130,8 +130,9 @@ function StatCounter({ target, prefix = '', suffix = '', label }: { target: numb
 function App() {
   const { displayed, done } = useTypewriter(HEADLINE);
   const [activeVideoIndex, setActiveVideoIndex] = useState(0);
+  const [activeWorkIndex, setActiveWorkIndex] = useState(0);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
-  
+
   const heroVideos = [
     { src: '/hero-space-v2.mp4', domain: 'Orbital Ops' },
     { src: '/hero-robotics.mp4', domain: 'Autonomous Robotics' },
@@ -139,12 +140,47 @@ function App() {
     { src: '/hero-physical-ai.mp4', domain: 'Physical AI' }
   ];
 
+  const workVideos = [
+    {
+      src: '/work-satellite.mp4',
+      mission: 'ORBIT-2026-X',
+      badge: 'Satellite Deployment · Orbital Insertion · Real-time Telemetry',
+      headline: 'Propulsion systems at the frontier of human exploration.',
+    },
+    {
+      src: '/work-manufacturing.mp4',
+      mission: 'AUTO-FAB-01',
+      badge: 'Robotic Manufacturing · High-Precision Assembly · Industrial AI',
+      headline: 'Autonomous fabrication at industrial scale.',
+    },
+    {
+      src: '/work-autonomous.mp4',
+      mission: 'DRIVE-TEST-09',
+      badge: 'Autonomous Driving · FSD Neural Networks · Edge Inference',
+      headline: 'Navigating the complexity of the physical world.',
+    },
+    {
+      src: '/work-datacenter.mp4',
+      mission: 'INFRA-CORE',
+      badge: 'AI Infrastructure · Data Center Management · Server Optimization',
+      headline: 'Foundational compute for the era of intelligence.',
+    }
+  ];
+
   useEffect(() => {
-    const timer = setInterval(() => {
+    const heroTimer = setInterval(() => {
       setActiveVideoIndex((prev) => (prev + 1) % heroVideos.length);
-    }, 10000); // Rotate every 10s
-    return () => clearInterval(timer);
-  }, [heroVideos.length]);
+    }, 10000); // Hero rotates every 10s
+    
+    const workTimer = setInterval(() => {
+      setActiveWorkIndex((prev) => (prev + 1) % workVideos.length);
+    }, 12000); // Work rotates every 12s
+    
+    return () => {
+      clearInterval(heroTimer);
+      clearInterval(workTimer);
+    };
+  }, [heroVideos.length, workVideos.length]);
 
   // Scroll-reveal observer
   useEffect(() => {
