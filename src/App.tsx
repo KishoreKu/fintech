@@ -179,12 +179,12 @@ function App() {
               preload="auto"
               aria-hidden="true"
             >
-              {/* Primary: Earth from space / orbital view */}
-              <source src="https://videos.pexels.com/video-files/2150327/2150327-uhd_2560_1440_30fps.mp4" type="video/mp4" />
-              {/* Fallback 1: Space / galaxy */}
-              <source src="https://videos.pexels.com/video-files/856426/856426-hd_1920_1080_25fps.mp4" type="video/mp4" />
-              {/* Fallback 2: Night city aerial (infrastructure) */}
-              <source src="https://videos.pexels.com/video-files/3571264/3571264-uhd_2560_1440_30fps.mp4" type="video/mp4" />
+              {/* Space videos — verified Pexels IDs (orbital / satellite / earth sunrise) */}
+              <source src="https://videos.pexels.com/video-files/854275/854275-hd_1920_1080_25fps.mp4" type="video/mp4" />
+              <source src="https://videos.pexels.com/video-files/33497216/33497216-hd_1920_1080_25fps.mp4" type="video/mp4" />
+              <source src="https://videos.pexels.com/video-files/31084229/31084229-hd_1920_1080_25fps.mp4" type="video/mp4" />
+              <source src="https://videos.pexels.com/video-files/36061451/36061451-hd_1920_1080_25fps.mp4" type="video/mp4" />
+              <source src="https://videos.pexels.com/video-files/34333825/34333825-hd_1920_1080_25fps.mp4" type="video/mp4" />
             </video>
             {/* Cinematic overlay — keeps headline legible */}
             <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at center, transparent 20%, rgba(0,0,0,0.45) 100%)' }} />
@@ -311,12 +311,10 @@ function App() {
                   preload="metadata"
                   poster="/featured_work_main.jpg"
                 >
-                  {/* Primary: autonomous / robotics / drone operations */}
-                  <source src="https://videos.pexels.com/video-files/3827387/3827387-hd_1920_1080_25fps.mp4" type="video/mp4" />
-                  {/* Fallback 1: AI / tech control room */}
-                  <source src="https://videos.pexels.com/video-files/5698601/5698601-hd_1920_1080_30fps.mp4" type="video/mp4" />
-                  {/* Fallback 2: server / data operations */}
-                  <source src="https://videos.pexels.com/video-files/3252912/3252912-hd_1920_1080_25fps.mp4" type="video/mp4" />
+                  {/* Robotics videos — verified Pexels IDs (industrial robot arms, factory, lab) */}
+                  <source src="https://videos.pexels.com/video-files/32386523/32386523-hd_1920_1080_25fps.mp4" type="video/mp4" />
+                  <source src="https://videos.pexels.com/video-files/32386518/32386518-hd_1920_1080_25fps.mp4" type="video/mp4" />
+                  <source src="https://videos.pexels.com/video-files/32386519/32386519-hd_1920_1080_25fps.mp4" type="video/mp4" />
                 </video>
                 {/* Blue tint overlay */}
                 <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(43,89,255,0.12) 0%, transparent 50%)', mixBlendMode: 'screen' }} />
