@@ -290,8 +290,10 @@ function App() {
             preload="auto"
             aria-hidden="true"
           >
-            {/* NASA Ingenuity Mars Helicopter Flight 57 — real color footage from Mars */}
+            {/* NASA SLS Rocket Engine Fire — four RS-25 engines, massive orange flames */}
             <source src="/work-robotics.webm" type="video/webm" />
+            {/* Fallback: SpaceX Starship Flight 5 Booster Catch */}
+            <source src="/work-robotics2.webm" type="video/webm" />
           </video>
 
           {/* Gradient overlays — keep bottom text readable, let top video breathe */}
@@ -301,7 +303,7 @@ function App() {
           {/* Top badge */}
           <div className="absolute top-8 left-[6vw] flex items-center gap-3 z-10">
             <span className="h-2 w-2 bg-[#2B59FF] rounded-full animate-pulse" />
-            <span className="text-[9px] font-mono tracking-[0.25em] uppercase text-white/60">NASA · Ingenuity Flight 57 · Mars 2024 · Physical AI in Action</span>
+            <span className="text-[9px] font-mono tracking-[0.25em] uppercase text-white/60">NASA · SLS Engine Test Fire · 322,000 lbs of Thrust · Space Launch System</span>
           </div>
 
           {/* Bottom content panel */}
@@ -311,7 +313,7 @@ function App() {
               <div>
                 <p className="mb-5 text-[10px] font-mono tracking-[0.3em] uppercase text-[#2B59FF] reveal">Mission: ORBIT-2026-X</p>
                 <h2 className="text-display text-[clamp(30px,4.5vw,68px)] leading-[1] mb-10 text-white reveal reveal-delay-1">
-                  Autonomous systems<br />operating at the edge<br />of what's possible.
+                  Propulsion systems<br />at the frontier<br />of human exploration.
                 </h2>
               </div>
 
