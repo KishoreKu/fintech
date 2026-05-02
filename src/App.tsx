@@ -393,7 +393,7 @@ function App() {
                 Access Point
               </p>
               <h2 className="max-w-4xl text-display text-[clamp(40px,6vw,92px)] leading-[0.95] text-white reveal reveal-delay-1">
-                Scale your technical<br />decision advantage.
+                Command your<br />autonomous future.
               </h2>
               <div className="mt-12 h-px w-24 bg-[#2B59FF]/40 reveal reveal-delay-2" />
             </div>
@@ -410,7 +410,7 @@ function App() {
                 +1 732-518-8899
               </a>
               <div className="mt-16 space-y-3">
-                <p className="text-[10px] font-mono tracking-[0.2em] uppercase text-white/20">Headquarters</p>
+                <p className="text-[10px] font-mono tracking-[0.2em] uppercase text-white/20">Global Operations</p>
                 <p className="text-[16px] leading-relaxed text-white/50 font-light">
                   613 Washington Blvd #1342<br />
                   Jersey City, NJ 07310
@@ -430,7 +430,7 @@ function App() {
             </div>
             <div className="flex items-center gap-2 text-white/30">
               <div className="h-1 w-1 bg-[#2B59FF]" />
-              <span>Precision. Clarity. Authority.</span>
+              <span>Precision. Autonomy. Scale.</span>
             </div>
           </footer>
         </section>
