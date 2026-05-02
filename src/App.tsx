@@ -278,75 +278,48 @@ function App() {
           </div>
         </section>
 
-        {/* ── WORK — technical video center piece ──────────────────────────── */}
-        <section id="work" className="relative bg-[#0a0c10] px-[6vw] py-32 text-white overflow-hidden border-t border-white/[0.06]">
-          {/* Subtle grid */}
-          <div
-            className="absolute inset-0 opacity-[0.05] pointer-events-none"
-            style={{
-              backgroundImage: `linear-gradient(to right, #ffffff12 1px, transparent 1px), linear-gradient(to bottom, #ffffff12 1px, transparent 1px)`,
-              backgroundSize: '80px 80px',
-            }}
-          />
-          {/* Deep blue atmosphere */}
-          <div className="absolute inset-0 pointer-events-none"
-            style={{ background: 'radial-gradient(ellipse at 40% 60%, rgba(43,89,255,0.07) 0%, transparent 55%)' }}
-          />
+        {/* ── WORK — full-width cinematic space/autonomy video ─────────────── */}
+        <section id="work" className="relative text-white overflow-hidden border-t border-white/[0.06]" style={{ minHeight: '85vh' }}>
+          {/* Full-bleed background video */}
+          <video
+            className="absolute inset-0 w-full h-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            aria-hidden="true"
+          >
+            {/* NASA Ingenuity Mars Helicopter Flight 57 — real color footage from Mars */}
+            <source src="/work-robotics.webm" type="video/webm" />
+          </video>
 
-          <div className="grid gap-20 lg:grid-cols-2 lg:items-center relative z-10">
-            {/* Technical video — server room / data operations */}
-            <div className="reveal relative overflow-hidden shadow-[0_0_80px_rgba(43,89,255,0.2)] group">
-              {/* Aspect ratio wrapper */}
-              <div className="relative aspect-video">
-                <video
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="metadata"
-                  poster="/featured_work_main.jpg"
-                >
-                  {/* NASA public domain — Ingenuity Mars helicopter autonomous flight (colorful, physical AI) */}
-                  <source src="/work-robotics.webm" type="video/webm" />
-                </video>
-                {/* Blue tint overlay */}
-                <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(43,89,255,0.12) 0%, transparent 50%)', mixBlendMode: 'screen' }} />
-                {/* Scan-line aesthetic */}
-                <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'repeating-linear-gradient(0deg, rgba(255,255,255,0.5) 0px, transparent 1px, transparent 3px)', backgroundSize: '100% 4px' }} />
-                {/* HUD overlay */}
-                <div className="absolute inset-0 border border-[#2B59FF]/25" />
-              </div>
-              {/* HUD top bar */}
-              <div className="absolute top-0 left-0 right-0 flex items-center justify-between px-4 py-3 bg-gradient-to-b from-black/70 to-transparent">
-                <div className="flex items-center gap-3">
-                  <span className="h-1.5 w-1.5 bg-[#2B59FF] rounded-full animate-pulse" />
-                  <span className="text-[9px] font-mono tracking-widest text-white/60 uppercase">Live · Mission Operations Center</span>
-                </div>
-                <span className="text-[9px] font-mono text-white/30">MISSION-01 · ENCRYPTED</span>
-              </div>
-              {/* HUD bottom bar */}
-              <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between px-4 py-3 bg-gradient-to-t from-black/70 to-transparent">
-                <span className="text-[9px] font-mono text-[#2B59FF]/70 tracking-widest">WG · AUTONOMOUS · ACTIVE</span>
-                <div className="flex items-center gap-2">
-                  <div className="w-16 h-0.5 bg-[#2B59FF]/30 relative overflow-hidden">
-                    <div className="absolute inset-y-0 left-0 w-3/4 bg-[#2B59FF] animate-pulse" />
-                  </div>
-                  <span className="text-[9px] font-mono text-white/30">73%</span>
-                </div>
-              </div>
-            </div>
+          {/* Gradient overlays — keep bottom text readable, let top video breathe */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-transparent" />
 
-            <div className="flex flex-col justify-center">
-              <p className="mb-6 text-[10px] font-mono tracking-[0.3em] uppercase text-[#2B59FF] reveal">Mission: ORBIT-2026-X</p>
-              <h2 className="text-display text-[clamp(34px,5vw,72px)] leading-[1] mb-12 text-white reveal reveal-delay-1">
-                Accelerating decision<br />velocity at scale.
-              </h2>
-              <div className="space-y-8">
+          {/* Top badge */}
+          <div className="absolute top-8 left-[6vw] flex items-center gap-3 z-10">
+            <span className="h-2 w-2 bg-[#2B59FF] rounded-full animate-pulse" />
+            <span className="text-[9px] font-mono tracking-[0.25em] uppercase text-white/60">NASA · Ingenuity Flight 57 · Mars 2024 · Physical AI in Action</span>
+          </div>
+
+          {/* Bottom content panel */}
+          <div className="absolute bottom-0 left-0 right-0 z-10 px-[6vw] pb-16 pt-32 bg-gradient-to-t from-black via-black/80 to-transparent">
+            <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:items-end max-w-[1400px]">
+
+              <div>
+                <p className="mb-5 text-[10px] font-mono tracking-[0.3em] uppercase text-[#2B59FF] reveal">Mission: ORBIT-2026-X</p>
+                <h2 className="text-display text-[clamp(30px,4.5vw,68px)] leading-[1] mb-10 text-white reveal reveal-delay-1">
+                  Autonomous systems<br />operating at the edge<br />of what's possible.
+                </h2>
+              </div>
+
+              <div className="space-y-5 pb-1">
                 {outcomes.map((outcome, i) => (
-                  <div key={outcome} className="flex items-start gap-6 border-t border-white/[0.08] pt-8 reveal" style={{ transitionDelay: `${i * 80}ms` }}>
-                    <ShieldCheck className="mt-1 h-5 w-5 flex-none text-[#2B59FF]/70" />
-                    <p className="text-[17px] leading-relaxed text-white/65 font-light">{outcome}</p>
+                  <div key={outcome} className="flex items-start gap-4 border-t border-white/[0.12] pt-5 reveal" style={{ transitionDelay: `${i * 80}ms` }}>
+                    <ShieldCheck className="mt-0.5 h-4 w-4 flex-none text-[#2B59FF]" />
+                    <p className="text-[15px] leading-relaxed text-white/70 font-light">{outcome}</p>
                   </div>
                 ))}
               </div>
