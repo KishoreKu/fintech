@@ -96,7 +96,7 @@ const InsightsSection = ({ className = '' }: InsightsSectionProps) => {
     <section
       ref={sectionRef}
       id="insights"
-      className={`flowing-section bg-[#F6F6F2] ${className}`}
+      className={`flowing-section bg-[#050505] ${className}`}
       style={{ paddingTop: '12vh', paddingBottom: '12vh' }}
     >
       {/* Header Row */}
@@ -107,28 +107,33 @@ const InsightsSection = ({ className = '' }: InsightsSectionProps) => {
       >
         {/* Left Accent Card */}
         <div
-          className="card-rounded card-shadow accent-bg flex items-center md:w-[min(32vw,400px)]"
+          className="flex items-center md:w-[min(32vw,400px)]"
           style={{
             padding: '4vh 3vw',
+            background: '#0d1530',
+            border: '1px solid rgba(43,89,255,0.3)',
+            boxShadow: '0 0 40px rgba(43,89,255,0.15)',
           }}
         >
-          <h2 className="text-display text-[clamp(28px,3.5vw,52px)] text-[#111216]">
+          <h2 className="text-display text-[clamp(28px,3.5vw,52px)] text-white">
             Insights
           </h2>
         </div>
 
-        {/* Right White Card */}
+        {/* Right Dark Card */}
         <div
-          className="card-rounded card-shadow bg-white flex flex-col justify-between flex-1"
+          className="flex flex-col justify-between flex-1"
           style={{
             padding: '3vh 2.5vw',
             minHeight: '18vh',
+            background: '#0a0a0a',
+            border: '1px solid rgba(255,255,255,0.08)',
           }}
         >
-          <p className="text-[14px] md:text-[15px] text-[#6E6F78] leading-relaxed">
+          <p className="text-[14px] md:text-[15px] text-white/45 leading-relaxed">
             Short reads on product, AI, and growth—plus tools you can use.
           </p>
-          <button className="flex items-center gap-2 text-[13px] font-semibold text-[#111216] hover:text-[#B8B9F7] transition-colors self-end group">
+          <button className="flex items-center gap-2 text-[13px] font-semibold text-[#2B59FF] hover:text-white transition-colors self-end group">
             Browse all
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </button>
@@ -144,8 +149,8 @@ const InsightsSection = ({ className = '' }: InsightsSectionProps) => {
           <div
             key={index}
             ref={cardRefs[index]}
-            className="card-rounded card-shadow bg-white will-change-transform overflow-hidden group cursor-pointer hover:translate-y-[-6px] transition-transform duration-300"
-            style={{ height: '28vh' }}
+            className="will-change-transform overflow-hidden group cursor-pointer hover:translate-y-[-6px] hover:border-[#2B59FF]/30 hover:shadow-[0_0_30px_rgba(43,89,255,0.1)] transition-all duration-300"
+            style={{ height: '28vh', background: '#0a0a0a', border: '1px solid rgba(255,255,255,0.08)' }}
           >
             <div className="flex h-full">
               {/* Image - Left 40% */}
@@ -160,14 +165,14 @@ const InsightsSection = ({ className = '' }: InsightsSectionProps) => {
               {/* Text - Right 60% */}
               <div className="w-[60%] h-full p-6 flex flex-col justify-between">
                 <div>
-                  <span className="text-micro text-[#B8B9F7] mb-2 block">
+                  <span className="text-micro text-[#2B59FF] mb-2 block">
                     {article.category}
                   </span>
-                  <h3 className="text-[15px] md:text-[17px] font-semibold text-[#111216] leading-tight">
+                  <h3 className="text-[15px] md:text-[17px] font-semibold text-white leading-tight">
                     {article.title}
                   </h3>
                 </div>
-                <div className="flex items-center gap-2 text-[12px] font-semibold text-[#6E6F78] group-hover:text-[#B8B9F7] transition-colors">
+                <div className="flex items-center gap-2 text-[12px] font-semibold text-[#2B59FF] group-hover:text-white transition-colors">
                   Read article
                   <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
                 </div>

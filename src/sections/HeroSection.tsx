@@ -95,79 +95,97 @@ const HeroSection = ({ className = '' }: HeroSectionProps) => {
     <section
       ref={sectionRef}
       id="hero"
-      className={`pinned-section bg-[#F6F6F2] ${className}`}
+      className={`pinned-section bg-[#050505] ${className}`}
     >
+      {/* Subtle grid overlay */}
+      <div
+        className="absolute inset-0 opacity-[0.05] pointer-events-none"
+        style={{
+          backgroundImage: `linear-gradient(to right, #ffffff10 1px, transparent 1px), linear-gradient(to bottom, #ffffff10 1px, transparent 1px)`,
+          backgroundSize: '60px 60px',
+        }}
+      />
+
       {/* Card A - Hero Photo */}
       <div
         ref={cardARef}
-        className="absolute card-rounded card-shadow will-change-transform"
+        className="absolute will-change-transform overflow-hidden"
         style={{
           left: '6vw',
           top: '10vh',
           width: '62vw',
           height: '56vh',
+          border: '1px solid rgba(255,255,255,0.08)',
         }}
       >
         <img
           src="/hero_office.jpg"
           alt="Team collaboration"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover opacity-75"
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
       </div>
 
       {/* Card D - Small Portrait */}
       <div
         ref={cardDRef}
-        className="absolute card-rounded card-shadow will-change-transform"
+        className="absolute will-change-transform overflow-hidden"
         style={{
           left: '70vw',
           top: '10vh',
           width: '24vw',
           height: '56vh',
+          border: '1px solid rgba(255,255,255,0.08)',
         }}
       >
         <img
           src="/hero_portrait.jpg"
           alt="Creative professional"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover opacity-75"
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
       </div>
 
-      {/* Card B - Headline (Accent) */}
+      {/* Card B - Headline (Dark Blue Accent) */}
       <div
         ref={cardBRef}
-        className="absolute card-rounded card-shadow accent-bg will-change-transform flex items-center"
+        className="absolute will-change-transform flex items-center"
         style={{
           left: '6vw',
           top: '70vh',
           width: '44vw',
           height: '22vh',
           padding: '4vh 3vw',
+          background: '#0d1530',
+          border: '1px solid rgba(43,89,255,0.3)',
+          boxShadow: '0 0 40px rgba(43,89,255,0.15)',
         }}
       >
-        <h1 className="text-display text-[clamp(28px,3.5vw,52px)] text-[#111216]">
+        <h1 className="text-display text-[clamp(28px,3.5vw,52px)] text-white">
           Intelligent<br />Systems
         </h1>
       </div>
 
-      {/* Card C - Intro Copy (White) */}
+      {/* Card C - Intro Copy (Dark surface) */}
       <div
         ref={cardCRef}
-        className="absolute card-rounded card-shadow bg-white will-change-transform flex flex-col justify-between"
+        className="absolute will-change-transform flex flex-col justify-between"
         style={{
           left: '52vw',
           top: '70vh',
           width: '42vw',
           height: '22vh',
           padding: '3vh 2.5vw',
+          background: '#0a0a0a',
+          border: '1px solid rgba(255,255,255,0.08)',
         }}
       >
-        <p className="text-[15px] md:text-[16px] text-[#6E6F78] leading-relaxed">
+        <p className="text-[15px] md:text-[16px] text-white/45 leading-relaxed">
           We design brands, products, and campaigns—then automate the hard parts with AI.
         </p>
         <button
           onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-          className="flex items-center gap-2 text-[13px] font-semibold text-[#111216] hover:text-[#B8B9F7] transition-colors self-end group"
+          className="flex items-center gap-2 text-[13px] font-semibold text-[#2B59FF] hover:text-white transition-colors self-end group"
         >
           Explore capabilities
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

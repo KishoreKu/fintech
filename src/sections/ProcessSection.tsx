@@ -114,20 +114,23 @@ const ProcessSection = ({ className = '' }: ProcessSectionProps) => {
     <section
       ref={sectionRef}
       id="process"
-      className={`flowing-section bg-[#F6F6F2] ${className}`}
+      className={`flowing-section bg-[#050505] ${className}`}
       style={{ paddingTop: '12vh', paddingBottom: '12vh' }}
     >
       {/* Heading Block */}
       <div
         ref={headingRef}
-        className="card-rounded card-shadow accent-bg will-change-transform mb-12"
+        className="will-change-transform mb-12"
         style={{
           marginLeft: '6vw',
           width: 'min(52vw, 720px)',
           padding: '4vh 3vw',
+          background: '#0d1530',
+          border: '1px solid rgba(43,89,255,0.3)',
+          boxShadow: '0 0 40px rgba(43,89,255,0.15)',
         }}
       >
-        <h2 className="text-display text-[clamp(28px,3.5vw,52px)] text-[#111216]">
+        <h2 className="text-display text-[clamp(28px,3.5vw,52px)] text-white">
           How We Work
         </h2>
       </div>
@@ -138,15 +141,17 @@ const ProcessSection = ({ className = '' }: ProcessSectionProps) => {
           <div key={idx}>
             <div
               ref={cardRefs[idx]}
-              className="card-rounded card-shadow bg-white will-change-transform flex items-start gap-8"
+              className="will-change-transform flex items-start gap-8"
               style={{
                 padding: '4vh 3vw',
                 minHeight: '26vh',
+                background: '#0a0a0a',
+                border: '1px solid rgba(255,255,255,0.08)',
               }}
             >
               {/* Number */}
               <div className="flex-shrink-0">
-                <span className="text-display text-[clamp(48px,6vw,80px)] text-[#B8B9F7]">
+                <span className="text-display text-[clamp(48px,6vw,80px)] text-[#2B59FF]/30">
                   {process.number}
                 </span>
               </div>
@@ -154,12 +159,12 @@ const ProcessSection = ({ className = '' }: ProcessSectionProps) => {
               {/* Content */}
               <div className="flex-1 pt-4">
                 <div className="flex items-center gap-3 mb-4">
-                  <process.icon className="w-6 h-6 text-[#B8B9F7]" />
-                  <h3 className="text-[20px] md:text-[24px] font-semibold text-[#111216]">
+                  <process.icon className="w-6 h-6 text-[#2B59FF]/60" />
+                  <h3 className="text-[20px] md:text-[24px] font-semibold text-white">
                     {process.title}
                   </h3>
                 </div>
-                <p className="text-[14px] md:text-[16px] text-[#6E6F78] leading-relaxed max-w-2xl">
+                <p className="text-[14px] md:text-[16px] text-white/45 leading-relaxed max-w-2xl">
                   {process.description}
                 </p>
               </div>
@@ -169,7 +174,7 @@ const ProcessSection = ({ className = '' }: ProcessSectionProps) => {
             {idx < processes.length - 1 && (
               <div
                 ref={idx === 0 ? line1Ref : line2Ref}
-                className="h-px bg-[#B8B9F7]/30 my-6 origin-left"
+                className="h-px bg-[#2B59FF]/20 my-6 origin-left"
                 style={{ width: '100%' }}
               />
             )}

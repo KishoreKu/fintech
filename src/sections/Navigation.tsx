@@ -12,13 +12,13 @@ const navItems = [
 const Logo = () => (
   <span className="flex items-center gap-3 text-white">
     <svg
-      width="38"
-      height="38"
+      width="32"
+      height="32"
       viewBox="0 0 38 38"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
-      className="h-12 w-12 flex-none"
+      className="h-8 w-8 flex-none"
     >
       <path
         d="M19 1.8L34.5 10.7V28.5L19 37.4L3.5 28.5V10.7L19 1.8ZM19 6.9L8 13.2V26L19 32.3L30 26V13.2L19 6.9Z"
@@ -29,7 +29,7 @@ const Logo = () => (
         fill="currentColor"
       />
     </svg>
-    <span className="flex items-center whitespace-nowrap text-[18px] font-extrabold uppercase leading-none tracking-[0.28em] antialiased">
+    <span className="flex items-center whitespace-nowrap text-[16px] font-bold uppercase leading-none tracking-[0.1em] antialiased">
       <span>Westley</span>
     </span>
   </span>
@@ -50,17 +50,29 @@ const Navigation = () => {
   }, []);
 
   const scrollToSection = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    const element = document.getElementById(id);
+    if (element) {
+      const offset = 80;
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
+    }
     setIsMobileMenuOpen(false);
   };
 
   return (
     <>
       <nav
-        className={`fixed left-0 top-0 z-[100] w-full border-b transition-all duration-300 ${
+        className={`fixed left-0 top-0 z-[100] w-full border-b transition-all duration-500 ${
           isScrolled
-            ? 'border-white/10 bg-[#0b0d10]/90 py-3 backdrop-blur-md'
-            : 'border-white/0 bg-transparent py-5'
+            ? 'border-white/[0.08] bg-black/90 py-3 backdrop-blur-md'
+            : 'border-transparent bg-transparent py-4'
         }`}
       >
         <div className="flex items-center justify-between px-[6vw]">
@@ -72,16 +84,22 @@ const Navigation = () => {
             <Logo />
           </button>
 
-          <div className="hidden items-center gap-7 md:flex">
+          <div className="hidden items-center gap-8 md:flex">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-micro text-[#c9ced8] transition-colors hover:text-white"
+                className="text-[12px] font-semibold uppercase tracking-wider text-white/50 transition-colors hover:text-white"
               >
                 {item.label}
               </button>
             ))}
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="border border-white/20 bg-white/5 px-5 py-2.5 text-[11px] font-bold uppercase tracking-widest text-white transition-all duration-300 hover:bg-[#2B59FF] hover:border-[#2B59FF] hover:shadow-[0_0_20px_rgba(43,89,255,0.4)]"
+            >
+              Get Started
+            </button>
           </div>
 
           <button
@@ -94,21 +112,37 @@ const Navigation = () => {
         </div>
       </nav>
 
+      {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 z-[99] bg-[#0b0d10] transition-transform duration-500 md:hidden ${
+        className={`fixed inset-0 z-[99] bg-black transition-transform duration-500 md:hidden ${
           isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        <div className="flex h-full flex-col items-start justify-center gap-8 px-[10vw]">
-          {navItems.map((item) => (
+        {/* Grid overlay */}
+        <div
+          className="absolute inset-0 opacity-10"
+          style={{
+            backgroundImage: `linear-gradient(to right, #ffffff10 1px, transparent 1px), linear-gradient(to bottom, #ffffff10 1px, transparent 1px)`,
+            backgroundSize: '40px 40px',
+          }}
+        />
+        <div className="relative flex h-full flex-col items-start justify-center gap-10 px-[10vw]">
+          {navItems.map((item, i) => (
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className="text-display text-[34px] text-white transition-colors hover:text-[#b8b9f7]"
+              className="text-display text-[34px] text-white/60 transition-colors hover:text-white"
+              style={{ transitionDelay: `${i * 40}ms` }}
             >
               {item.label}
             </button>
           ))}
+          <button
+            onClick={() => scrollToSection('contact')}
+            className="mt-4 border border-[#2B59FF] px-8 py-3 text-[11px] font-bold uppercase tracking-widest text-[#2B59FF] hover:bg-[#2B59FF] hover:text-white transition-all"
+          >
+            Get Started
+          </button>
         </div>
       </div>
     </>

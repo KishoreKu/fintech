@@ -80,39 +80,53 @@ const FeaturedWorkSection = ({ className = '' }: FeaturedWorkSectionProps) => {
     <section
       ref={sectionRef}
       id="featured-work"
-      className={`pinned-section bg-[#F6F6F2] ${className}`}
+      className={`pinned-section bg-[#050505] ${className}`}
     >
+      {/* Subtle grid overlay */}
+      <div
+        className="absolute inset-0 opacity-[0.05] pointer-events-none"
+        style={{
+          backgroundImage: `linear-gradient(to right, #ffffff10 1px, transparent 1px), linear-gradient(to bottom, #ffffff10 1px, transparent 1px)`,
+          backgroundSize: '60px 60px',
+        }}
+      />
+
       {/* Card A - Dominant Work Image */}
       <div
         ref={cardARef}
-        className="absolute card-rounded card-shadow will-change-transform"
+        className="absolute will-change-transform overflow-hidden"
         style={{
           left: '6vw',
           top: '10vh',
           width: '62vw',
           height: '56vh',
+          border: '1px solid rgba(255,255,255,0.08)',
         }}
       >
         <img
           src="/featured_work_main.jpg"
           alt="Featured work"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover opacity-75"
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
       </div>
 
-      {/* Card B - Top Right Title (Accent) */}
+      {/* Card B - Top Right Title (Dark Blue Accent) */}
       <div
         ref={cardBRef}
-        className="absolute card-rounded card-shadow accent-bg will-change-transform flex items-center justify-center"
+        className="absolute will-change-transform flex items-center justify-center"
         style={{
           left: '70vw',
           top: '10vh',
           width: '24vw',
           height: '26vh',
           padding: '2vh 1.5vw',
+          background: '#0d1530',
+          border: '1px solid rgba(43,89,255,0.3)',
+          boxShadow: '0 0 40px rgba(43,89,255,0.15)',
         }}
       >
-        <h2 className="text-display text-[clamp(16px,1.8vw,28px)] text-[#111216] text-center">
+        <h2 className="text-display text-[clamp(16px,1.8vw,28px)] text-white text-center">
           Featured<br />Work
         </h2>
       </div>
@@ -120,57 +134,64 @@ const FeaturedWorkSection = ({ className = '' }: FeaturedWorkSectionProps) => {
       {/* Card C - Top Right Photo */}
       <div
         ref={cardCRef}
-        className="absolute card-rounded card-shadow will-change-transform"
+        className="absolute will-change-transform overflow-hidden"
         style={{
           left: '70vw',
           top: '38vh',
           width: '24vw',
           height: '28vh',
+          border: '1px solid rgba(255,255,255,0.08)',
         }}
       >
         <img
           src="/featured_work_detail1.jpg"
           alt="Work detail"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover opacity-75"
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
       </div>
 
-      {/* Card D - Bottom Left Title (Accent) */}
+      {/* Card D - Bottom Left Title (Dark Blue Accent) */}
       <div
         ref={cardDRef}
-        className="absolute card-rounded card-shadow accent-bg will-change-transform flex items-center"
+        className="absolute will-change-transform flex items-center"
         style={{
           left: '6vw',
           top: '70vh',
           width: '44vw',
           height: '22vh',
           padding: '4vh 3vw',
+          background: '#0d1530',
+          border: '1px solid rgba(43,89,255,0.3)',
+          boxShadow: '0 0 40px rgba(43,89,255,0.15)',
         }}
       >
-        <h2 className="text-display text-[clamp(20px,2.5vw,36px)] text-[#111216]">
+        <h2 className="text-display text-[clamp(20px,2.5vw,36px)] text-white">
           Selected<br />Projects
         </h2>
       </div>
 
-      {/* Card E - Bottom Right Copy (White) */}
+      {/* Card E - Bottom Right Copy (Dark surface) */}
       <div
         ref={cardERef}
-        className="absolute card-rounded card-shadow bg-white will-change-transform flex flex-col justify-between"
+        className="absolute will-change-transform flex flex-col justify-between"
         style={{
           left: '52vw',
           top: '70vh',
           width: '42vw',
           height: '22vh',
           padding: '3vh 2.5vw',
+          background: '#0a0a0a',
+          border: '1px solid rgba(255,255,255,0.08)',
         }}
       >
-        <p className="text-[14px] md:text-[15px] text-[#6E6F78] leading-relaxed">
-          A few recent builds—identity, product, and AI-powered campaigns. 
+        <p className="text-[14px] md:text-[15px] text-white/45 leading-relaxed">
+          A few recent builds—identity, product, and AI-powered campaigns.
           Each project reflects our commitment to craft and performance.
         </p>
         <button
           onClick={() => document.getElementById('insights')?.scrollIntoView({ behavior: 'smooth' })}
-          className="flex items-center gap-2 text-[13px] font-semibold text-[#111216] hover:text-[#B8B9F7] transition-colors self-end group"
+          className="flex items-center gap-2 text-[13px] font-semibold text-[#2B59FF] hover:text-white transition-colors self-end group"
         >
           View the archive
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

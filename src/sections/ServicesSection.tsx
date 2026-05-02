@@ -43,11 +43,10 @@ const ServicesSection = ({ className = '' }: ServicesSectionProps) => {
         .fromTo(card2, { y: '60vh', opacity: 0 }, { y: 0, opacity: 1, ease: 'none' }, 0.08)
         .fromTo(card3, { y: '60vh', opacity: 0 }, { y: 0, opacity: 1, ease: 'none' }, 0.1);
 
-      // Phase 2: SETTLE (30% - 70%) - ambient animations
-      // Card 2 subtle scale
-      scrollTl.fromTo(card2, 
-        { scale: 1 }, 
-        { scale: 1.01, ease: 'sine.inOut', yoyo: true, repeat: 1 }, 
+      // Phase 2: SETTLE (30% - 70%)
+      scrollTl.fromTo(card2,
+        { scale: 1 },
+        { scale: 1.01, ease: 'sine.inOut', yoyo: true, repeat: 1 },
         0.3
       );
 
@@ -73,85 +72,103 @@ const ServicesSection = ({ className = '' }: ServicesSectionProps) => {
   return (
     <section
       ref={sectionRef}
-      id="services"
-      className={`pinned-section bg-[#F6F6F2] ${className}`}
+      id="services-pinned"
+      className={`pinned-section bg-[#050505] ${className}`}
     >
-      {/* Card 1 - Services Photo */}
+      {/* Subtle grid overlay */}
+      <div
+        className="absolute inset-0 opacity-[0.05] pointer-events-none"
+        style={{
+          backgroundImage: `linear-gradient(to right, #ffffff10 1px, transparent 1px), linear-gradient(to bottom, #ffffff10 1px, transparent 1px)`,
+          backgroundSize: '60px 60px',
+        }}
+      />
+
+      {/* Card 1 — Services Photo */}
       <div
         ref={card1Ref}
-        className="absolute card-rounded card-shadow will-change-transform"
+        className="absolute will-change-transform overflow-hidden"
         style={{
           left: '6vw',
           top: '10vh',
           width: '62vw',
           height: '56vh',
+          border: '1px solid rgba(255,255,255,0.08)',
         }}
       >
         <img
           src="/services_team.jpg"
           alt="Team meeting"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover opacity-70"
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
       </div>
 
-      {/* Card 4 - Portrait */}
+      {/* Card 4 — Portrait */}
       <div
         ref={card4Ref}
-        className="absolute card-rounded card-shadow will-change-transform"
+        className="absolute will-change-transform overflow-hidden"
         style={{
           left: '70vw',
           top: '10vh',
           width: '24vw',
           height: '56vh',
+          border: '1px solid rgba(255,255,255,0.08)',
         }}
       >
         <img
           src="/services_portrait.jpg"
           alt="Team lead"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover opacity-70"
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
       </div>
 
-      {/* Card 2 - Title Block (Accent) */}
+      {/* Card 2 — Title Block (Dark Blue) */}
       <div
         ref={card2Ref}
-        className="absolute card-rounded card-shadow accent-bg will-change-transform flex items-center"
+        className="absolute will-change-transform flex items-center"
         style={{
           left: '6vw',
           top: '70vh',
           width: '44vw',
           height: '22vh',
           padding: '4vh 3vw',
+          background: '#0d1530',
+          border: '1px solid rgba(43,89,255,0.3)',
+          boxShadow: '0 0 40px rgba(43,89,255,0.15)',
         }}
       >
-        <h2 className="text-display text-[clamp(28px,3.5vw,52px)] text-[#111216]">
+        <h2 className="text-display text-[clamp(28px,3.5vw,52px)] text-white">
           Services
         </h2>
       </div>
 
-      {/* Card 3 - List Block (White) */}
+      {/* Card 3 — List Block (Dark surface) */}
       <div
         ref={card3Ref}
-        className="absolute card-rounded card-shadow bg-white will-change-transform flex flex-col justify-between"
+        className="absolute will-change-transform flex flex-col justify-between"
         style={{
           left: '52vw',
           top: '70vh',
           width: '42vw',
           height: '22vh',
           padding: '2.5vh 2.5vw',
+          background: '#0a0a0a',
+          border: '1px solid rgba(255,255,255,0.08)',
         }}
       >
         <div className="space-y-2">
           {services.map((service, index) => (
             <div key={index} className="flex items-center gap-2">
-              <service.icon className="w-4 h-4 text-[#B8B9F7] flex-shrink-0" />
-              <span className="text-[12px] md:text-[13px] text-[#111216]">{service.text}</span>
+              <service.icon className="w-4 h-4 text-[#2B59FF]/60 flex-shrink-0" />
+              <span className="text-[12px] md:text-[13px] text-white/60">{service.text}</span>
             </div>
           ))}
         </div>
         <button
           onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-          className="flex items-center gap-2 text-[13px] font-semibold text-[#111216] hover:text-[#B8B9F7] transition-colors self-end group"
+          className="flex items-center gap-2 text-[13px] font-semibold text-[#2B59FF] hover:text-white transition-colors self-end group"
         >
           See packages
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

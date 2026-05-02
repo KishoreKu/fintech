@@ -89,7 +89,7 @@ const ManifestoSection = ({ className = '' }: ManifestoSectionProps) => {
     <section
       ref={sectionRef}
       id="manifesto"
-      className={`pinned-section bg-[#F6F6F2] ${className}`}
+      className={`pinned-section bg-[#050505] ${className}`}
     >
       {/* Grid Container */}
       <div
@@ -109,33 +109,40 @@ const ManifestoSection = ({ className = '' }: ManifestoSectionProps) => {
         {/* Photo 1 - Top Left */}
         <div
           ref={photo1Ref}
-          className="card-rounded card-shadow will-change-transform overflow-hidden"
+          className="will-change-transform overflow-hidden"
+          style={{ border: '1px solid rgba(255,255,255,0.08)' }}
         >
           <img
             src="/manifesto_1.jpg"
             alt="Creative workspace"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover opacity-70"
           />
         </div>
 
         {/* Photo 2 - Top Center */}
         <div
           ref={photo2Ref}
-          className="card-rounded card-shadow will-change-transform overflow-hidden"
+          className="will-change-transform overflow-hidden"
+          style={{ border: '1px solid rgba(255,255,255,0.08)' }}
         >
           <img
             src="/manifesto_2.jpg"
             alt="Team brainstorming"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover opacity-70"
           />
         </div>
 
-        {/* Title Cell - Top Right (Accent) */}
+        {/* Title Cell - Top Right (Dark Blue Accent) */}
         <div
           ref={titleCellRef}
-          className="card-rounded card-shadow accent-bg will-change-transform flex items-center justify-center p-6"
+          className="will-change-transform flex items-center justify-center p-6"
+          style={{
+            background: '#0d1530',
+            border: '1px solid rgba(43,89,255,0.3)',
+            boxShadow: '0 0 40px rgba(43,89,255,0.15)',
+          }}
         >
-          <h2 className="text-display text-[clamp(20px,2.5vw,36px)] text-[#111216] text-center">
+          <h2 className="text-display text-[clamp(20px,2.5vw,36px)] text-white text-center">
             Our<br />Manifesto
           </h2>
         </div>
@@ -143,30 +150,35 @@ const ManifestoSection = ({ className = '' }: ManifestoSectionProps) => {
         {/* Photo 3 - Bottom Left */}
         <div
           ref={photo3Ref}
-          className="card-rounded card-shadow will-change-transform overflow-hidden"
+          className="will-change-transform overflow-hidden"
+          style={{ border: '1px solid rgba(255,255,255,0.08)' }}
         >
           <img
             src="/manifesto_3.jpg"
             alt="Developer coding"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover opacity-70"
           />
         </div>
 
-        {/* Text Cell - Bottom Center (White) */}
+        {/* Text Cell - Bottom Center (Dark surface) */}
         <div
           ref={textCellRef}
-          className="card-rounded card-shadow bg-white will-change-transform flex flex-col justify-between p-6"
+          className="will-change-transform flex flex-col justify-between p-6"
+          style={{
+            background: '#0a0a0a',
+            border: '1px solid rgba(255,255,255,0.08)',
+          }}
         >
           <div className="space-y-3">
             {manifestoPoints.map((point, idx) => (
-              <p key={idx} className="text-[13px] md:text-[14px] text-[#111216] font-medium">
+              <p key={idx} className="text-[13px] md:text-[14px] text-white/70 font-medium">
                 {point}
               </p>
             ))}
           </div>
           <button
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            className="flex items-center gap-2 text-[12px] font-semibold text-[#111216] hover:text-[#B8B9F7] transition-colors self-end group"
+            className="flex items-center gap-2 text-[12px] font-semibold text-[#2B59FF] hover:text-white transition-colors self-end group"
           >
             Meet the team
             <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
@@ -176,12 +188,13 @@ const ManifestoSection = ({ className = '' }: ManifestoSectionProps) => {
         {/* Photo 4 - Bottom Right */}
         <div
           ref={photo4Ref}
-          className="card-rounded card-shadow will-change-transform overflow-hidden"
+          className="will-change-transform overflow-hidden"
+          style={{ border: '1px solid rgba(255,255,255,0.08)' }}
         >
           <img
             src="/manifesto_4.jpg"
             alt="Team celebration"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover opacity-70"
           />
         </div>
       </div>
