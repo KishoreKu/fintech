@@ -129,6 +129,22 @@ function StatCounter({ target, prefix = '', suffix = '', label }: { target: numb
 
 function App() {
   const { displayed, done } = useTypewriter(HEADLINE);
+  const [activeVideoIndex, setActiveVideoIndex] = useState(0);
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+  
+  const heroVideos = [
+    { src: '/hero-space-v2.mp4', domain: 'Orbital Ops' },
+    { src: '/hero-robotics.mp4', domain: 'Autonomous Robotics' },
+    { src: '/hero-ai.mp4', domain: 'Artificial Intelligence' },
+    { src: '/hero-physical-ai.mp4', domain: 'Physical AI' }
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveVideoIndex((prev) => (prev + 1) % heroVideos.length);
+    }, 10000); // Rotate every 10s
+    return () => clearInterval(timer);
+  }, [heroVideos.length]);
 
   // Scroll-reveal observer
   useEffect(() => {
@@ -178,7 +194,7 @@ function App() {
                 }`}
               >
                 <video
-                  ref={(el) => (videoRefs.current[index] = el)}
+                  ref={(el) => { videoRefs.current[index] = el; }}
                   className="hero-background-video"
                   autoPlay
                   muted
